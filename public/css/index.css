@@ -5,7 +5,7 @@ html {
 body .section1 {
   min-height: 100vh;
   color: white;
-  background-image: url("/Images/Header1.png");
+  background-image: url("/images/Header1.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -86,7 +86,7 @@ body .section4 .badge {
 }
 body .section5 {
   color: white;
-  background-image: url("/Images/Theme1.png");
+  background-image: url("/images/Theme1.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -166,7 +166,7 @@ body .section8 .div .badge-dark {
 }
 body .section9 {
   padding-top: 50px;
-  background-image: url("/Images/head3.png");
+  background-image: url("/images/head3.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -188,7 +188,7 @@ body .section10 .badge {
   color: transparent;
 }
 body .section11 {
-  background-image: url("/Images/head2.png");
+  background-image: url("/images/head2.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
