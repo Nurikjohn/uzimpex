@@ -1,0 +1,297 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body .section1 {
+  min-height: 100vh;
+  color: white;
+  background-image: url("/Images/Header1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+body .section1 .ab img {
+  float: left;
+  margin-top: 10px;
+  margin-right: 5px;
+}
+body .section1 hr {
+  padding: 0;
+  margin: 0;
+}
+body .section1 .btn {
+  height: 60px;
+  background-color: rgba(135, 136, 104, 0.62);
+  color: white;
+}
+body .section1 .btn img {
+  width: 25px;
+  margin-right: 20px;
+}
+body .section1 dl {
+  color: white;
+}
+body .section1 a {
+  color: white;
+  border-bottom: 3px solid transparent;
+}
+body .section1 form a {
+  color: white;
+}
+body .section1 .navbar {
+  padding: 0;
+}
+body .section1 a:hover {
+  color: white !important;
+  border-bottom: 3px solid orangered;
+  transition: 0.5s;
+}
+body .section1 .carousel-item {
+  height: 100%;
+  background: no-repeat;
+  background-size: cover;
+}
+body .section2 .badge {
+  background-color: black;
+  width: 120px;
+  height: 3px;
+  color: transparent;
+}
+body .section3 {
+  text-align: center;
+  background-color: #f4f4f4;
+}
+body .section3 .badge-dark {
+  background-color: black;
+  width: 120px;
+  height: 3px;
+  color: transparent;
+}
+body .section3 .card img {
+  width: 119% !important;
+  margin-left: -20px;
+  margin-top: -20px;
+}
+body .section3 .card .badge {
+  background-color: black;
+  width: 50px;
+  height: 3px;
+  color: transparent;
+}
+body .section4 .badge {
+  background-color: black;
+  width: 120px;
+  height: 3px;
+  color: transparent;
+}
+body .section5 {
+  color: white;
+  background-image: url("/Images/Theme1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+body .section5 .btn {
+  color: white !important;
+  border: 1px solid whitesmoke !important;
+}
+body .section6 .head {
+  text-align: center;
+}
+body .section6 .head .badge-dark {
+  background-color: black;
+  width: 120px;
+  height: 3px;
+  color: transparent;
+}
+body .section6 .bir {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 300px;
+  padding: 250px 20px 0px 20px;
+}
+body .section6 .ikki {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 300px;
+  padding: 250px 20px 0px 20px;
+  margin-bottom: 150px;
+}
+body .section6 .uch {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 300px;
+  padding: 250px 20px 0px 20px;
+}
+body .section6 .tort {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 300px;
+  padding: 250px 20px 0px 20px;
+}
+body .section6 .box {
+  background-color: white;
+  padding: 15px;
+  box-sizing: border-box;
+  box-shadow: 1px 5px 10px;
+}
+body .section7 {
+  margin-top: 50px;
+  padding-top: 50px;
+  text-align: center;
+  background-color: lightgrey;
+}
+body .section7 h2 {
+  font-size: 70px;
+}
+body .section7 .p1 {
+  font-size: 50px;
+}
+body .section8 {
+  text-align: center;
+}
+body .section8 .div {
+  padding: 50px 0;
+  text-align: center;
+}
+body .section8 .div .badge-dark {
+  background-color: black;
+  width: 120px;
+  height: 3px;
+  color: transparent;
+}
+body .section9 {
+  padding-top: 50px;
+  background-image: url("/Images/head3.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+body .section10 {
+  text-align: center;
+}
+body .section10 .div .badge-dark {
+  background-color: black;
+  width: 120px;
+  height: 3px;
+  color: transparent;
+}
+body .section10 .badge {
+  background-color: black;
+  width: 50px;
+  height: 3px;
+  color: transparent;
+}
+body .section11 {
+  background-image: url("/Images/head2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+body .section11 .badge-dark {
+  background-color: orangered;
+  width: 120px;
+  height: 3px;
+  color: transparent;
+}
+body .section11 .box {
+  background-color: rgba(84, 63, 49, 0.78);
+}
+body .section11 .list {
+  padding: 50px 0px 50px 100px;
+}
+body .section12 {
+  text-align: center;
+}
+body .section13 .div {
+  text-align: center;
+}
+body .section13 img {
+  width: 100%;
+}
+body .section13 .carousel-indicators li {
+  border-radius: 50% !important;
+  width: 10px !important;
+  height: 10px !important;
+  background-color: #141414 !important;
+  color: red !important;
+}
+body .section14 {
+  color: white !important;
+  background-color: rgba(16, 8, 8, 0.67);
+}
+body .section14 hr {
+  color: white;
+  background-color: white;
+}
+body .section14 a {
+  color: white;
+}
+body .section14 .container {
+  background-image: url("/SVG/Map.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+body .section14 span img {
+  float: left;
+  padding-top: 11px;
+  margin-right: 10px;
+}
+body .section14 .badge {
+  background-color: transparent;
+  border-radius: 10px;
+  width: 50px;
+  cursor: pointer;
+}
+body .section14 .badge img {
+  width: 30px;
+}
+body .section14 .badge:hover {
+  background-color: gray;
+}
+
+.icon {
+  font-size: 24px;
+}
+
+.round {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 5%;
+  right: 2%;
+  background-color: #777777;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  box-sizing: border-box;
+}
+.round > i {
+  font-size: 48px;
+  color: white;
+}
+
+.round:hover {
+  background-color: #555555;
+}
+
+.navbar-brand > img {
+  height: 50px;
+}
+
+.icon-48 {
+  font-size: 48px;
+}
+
+.icon-menu {
+  color: white;
+}

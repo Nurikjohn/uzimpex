@@ -1,0 +1,61 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+    title Add Product
+    link(href="/../css/bootstrap.min.css" rel="stylesheet")
+    style.
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    // Custom styles for this template
+    link(href="/../css/bootstrap.min.css" rel="stylesheet")
+  body.bg-light
+    .container
+      .text-center
+        img.d-block.mx-auto.mb-4(src="../assets/brand/bootstrap-solid.svg" alt="" width="72" height="72")
+        h2 Add new product
+      form(action="/api/products" method="post" enctype="multipart/form-data")
+        .form-group
+          label(for="exampleFormControlInput1") Title
+          input#exampleFormControlInput1.form-control(type="text" placeholder="" name="title")
+        .form-group
+          label(for="exampleFormControlInput2") Keywords
+          input#exampleFormControlInput2.form-control(type="text" placeholder="" name="keywords")
+        .form-group
+          label(for="exampleFormControlInput4") Price
+          input#exampleFormControlInput4.form-control(type="number" placeholder="" name="price")
+        .form-group
+          label(for="exampleFormControlInput5") Amount
+          input#exampleFormControlInput5.form-control(type="number" placeholder="" name="amount")
+        .form-group
+          label(for="exampleFormControlSelect1") Category
+          select(name="categoryId")#exampleFormControlSelect1.form-control
+            for cat in categories
+              option(value=cat._id)= cat.title
+        .form-group
+          label(for="exampleFormControlTextarea1") Description
+          textarea#exampleFormControlTextarea1.form-control(rows="3" name="description")
+        .form-group
+          label(for="exampleFormControlTextarea2") Details
+          textarea#exampleFormControlTextarea2.form-control(rows="3" name="details")
+        .custom-file.mb-3.mt-3
+          input#validatedCustomFile.custom-file-input(type="file" required="" name="image")
+          label.custom-file-label(for="validatedCustomFile") Choose image...
+          .invalid-feedback Example invalid custom file feedback
+        button.btn.btn-primary.float-right(type="submit") Submit form
+      footer.my-5.pt-5.text-muted.text-center.text-small
+        p.mb-1 © 2008-2020 UzImpex
+    script(src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous")
+    script(src="/../js/bootstrap.min.js")

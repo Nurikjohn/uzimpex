@@ -1,0 +1,10 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        title Title
+        link(href="css/bootstrap.min.css" rel="stylesheet")
+    body
+        .d-flex.justify-content-center
+            for cat in categories
+              a(href=`/admin/${cat.slug}`)= cat.title
