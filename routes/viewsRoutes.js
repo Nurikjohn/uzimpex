@@ -14,4 +14,6 @@ router.route("/admin/product/add-product").get(viewsController.addProduct);
 
 router.route("/admin/product/edit-product/:id").get(viewsController.editProduct);
 
+router.route("/:lang").get(viewsController.index);
+
 module.exports = router;

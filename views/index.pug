@@ -1,666 +1,678 @@
 doctype html
 html(lang="en")
-  head
-    meta(charset="UTF-8")
-    title= settings.title
-    link(rel="stylesheet" href="css/index.css")
-    meta(http-equiv="X-UA-Compatible" content="IE=edge")
-    meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    link(rel="stylesheet" href="css/bootstrap.min.css")
-    link(href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet")
-    .section1(id="navbar")
-      .container
-        .header
-          .container
-            .head
-              .row.pt-lg-3
-                .col-lg-6
-                  button.navbar-toggler.d-lg-none(type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation")
-                    span
-                      i.bx.bx-menu-alt-left.icon-menu
-                  .navbar-brand(href="#")
-                    img(src=settings.image alt="")
-                .col-lg-2.ab
-                  span
-                    img(src="SVG/Icon%20weather-time-9.svg" alt="")
-                  dl
-                    dt Рабочее время
-                    dd Пон-Суб: 9-20
-                .col-lg-2.ab(style="padding-right: 0; padding-left: 0")
-                  span
-                    img(src="SVG/Icon%20awesome-location-arrow.svg" alt="")
-                  dl
-                    dt Расположение
-                    dd= settings.adress
-                .col-lg-2.ab
-                  span
-                    img(src="SVG/Icon%20awesome-phone-alt.svg" alt="")
-                  dl
-                    dt Колл-центр
-                    dd= settings.phone
-            hr
-            .row
-              .col-lg-8.offset-lg-4
-                nav.navbar.navbar-expand-lg.navbar-white.bg-transparent
-                  #navbarTogglerDemo03.collapse.navbar-collapse
-                    ul.navbar-nav.mr-auto.mt-2.mt-lg-0
-                      li.nav-item.mx-lg-3
-                        a.nav-link(href="#") ГЛАВНАЯ
-                      li.nav-item.mx-lg-3
-                        a.nav-link(style="margin: 0;padding-left: 0" href="#vid")
-                          | ВИДЫ
-                          | ДЕЯТЕЛЬНОСТИ
-                      li.nav-item.mx-lg-3
-                        a.nav-link(href="#uslugi") УСЛУГИ
-                      li.nav-item.mx-lg-3
-                        a.nav-link(href="#productsiya") ПРОДУКЦИЯ
-                      li.nav-item.mx-lg-3
-                        a.nav-link(href="#kontakti") КОНТАКТЫ
-      .container
-        .box
-          br
-          br
-          br
-          br
-          br
-          br
-          h1.text-break
-            | ЭКСПОРТ И ИМПОРТ
-            br
-            |  СЕЛЬСКОХЗЯЙСТВЕННОЙ ПРОДУКЦИИ
-          p.text-break= settings.description
-          br
-          br
-          .row.mt-5
-            .col-lg-4
-              button.w-100.btn
-                img(src="SVG/Icon%20ionic-ios-mail.svg" alt="")
-                b Отправить запрос
-            .col-lg-4
-              button.w-100.btn
-                img(src="SVG/Icon%20ionic-md-chatboxes.svg" alt="")
-                b Задать вопрос
-            .col-lg-4
-              button.w-100.btn
-                img(src="SVG/Icon%20awesome-phone-alt.svg" alt="")
-                b Обратный звонок
-          br
-          br
-    .section2
-      .container
-        .row.my-lg-5
-          .col-lg-6
-            h1.text-break
-              | ДОБРО&nbsp;
-              span(style="background-color: #484848; color: whitesmoke") ПОЖАЛОВАТЬ
-            .badge.badge-dark .
-            p(style="color: grey")
-                | Все наши услуги и инвестиции направлены на предложение лучших решений
-            p= settings.aboutUS
-            .row
-              .col-lg-9
-                h5
-                  b Xurshid Istamov
-                p Директор компании...
-              .col-lg-3
-                img(src="" alt="")
-          .col-lg-6
-            img.img-fluid(src="images/transportation-logistics_37416-135.png" alt="")
-    .section3(id="vid")
-      .container.py-lg-5
-        h2
-          | ВИДЫ&nbsp;
-          span(style="background-color: #484848; color: whitesmoke") ДЕЯТЕЛЬНОСТИ
-        .badge.badge-dark .
-        p(style="color: grey") Lorem ipsum dolor sit amet, consectetur adipisicing elit
-        .row
-          .col-lg-3
-            .card
-              .card-body
-                img.card-img-top.w-100(src="images/Пересечение%204.png" alt="")
-                h5.mt-lg-2
-                  | ЭКСПОРТ
-                  br
-                  |  ТОВАРОВ
-                .badge .
-                p
-                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci asperiores consequatur
-                  | corporis dolorem fugiat similique.
-                button.btn.btn-outline-dark Подробнее
-          .col-lg-3
-            .card
-              .card-body
-                img.card-img-top.w-100(src="images/Пересечение%206.png" alt="")
-                h5.mt-lg-2
-                  | ИМПОРТ
-                  br
-                  |  ТОВАРОВ
-                .badge .
-                p
-                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci asperiores consequatur
-                  | corporis dolorem fugiat similique.
-                button.btn.btn-outline-dark Подробнее
-          .col-lg-3
-            .card
-              .card-body
-                img.card-img-top.w-100(src="images/Пересечение%207.png" alt="")
-                h5.mt-lg-2
-                  | МЕЖДУНАРОДНЫЕ
-                  br
-                  |  ПЕРЕВОЗКИ
-                .badge .
-                p
-                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci asperiores consequatur
-                  | corporis dolorem fugiat similique.
-                button.btn.btn-outline-dark Подробнее
-          .col-lg-3
-            .card
-              .card-body
-                img.card-img-top.w-100(src="images/Пересечение%208.png" alt="")
-                h5.mt-lg-2
-                  | УСЛУГИ
-                  br
-                  |  В СФЕРЕ ВЭД
-                .badge .
-                p
-                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci asperiores consequatur
-                  | corporis dolorem fugiat similique.
-                button.btn.btn-outline-dark Подробнее
-    .section4
-      .container
-        .row.my-lg-5
-          .col-lg-6
-            img.img-fluid(src="SVG/Сгруппировать%2023.svg" alt="")
-          .col-lg-6
-            h2.text-break
-              | О КОМПАНИИ&nbsp;
-              span(style="background-color:  #484848; color: whitesmoke") "UZIMPEX" LLC
-            .badge.badge-dark .
-            p(style="color: grey")= settings.aboutUS
-    .section5
-      .container.py-lg-5
-        br
-        br
-        .row
-          .col-lg-6
-            h1
-              | НАША
-              span(style="background-color:  #484848; color: whitesmoke") ЦЕЛЬ
-            p(style="font-size: 20px")
-              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque dicta
-              | distinctio earum facere fugiat
-              | illum in ipsa odio praesentium quo similique, tenetur voluptate voluptatem. A aperiam blanditiis
-              | consequatur culpa enim ex fugiat ipsa itaque magnam, maiores natus nihil nobis odit placeat porro
-              | quis quod repellat sed sint unde ut vero?
-            br
-            button.btn.btn-outline-dark Подробнее
-            br
-            br
-    .section6(id="productsiya")
-      .container.py-lg-5.pb-0
-        .head
-          h2.text-break
-            | ЭКСПОРТИРУЕМАЯ&nbsp;
-            span(style="background-color:  #484848; color: whitesmoke") ПРОДУКЦИЯ
-          .badge.badge-dark .
-          p(style="color: grey") Lorem ipsum dolor sit amet, consectetur adipisicing elit
-        .row
-          for product in products
-            .col-lg-6.mb-4
-              .card.border-0
-                img.card-img-top(src=product.image alt="..." style="max-height: 300px")
-                .card-body.mr-4.ml-4.border.mt-n5.bg-white
-                  h5.card-title= product.title
-                  p.text-truncate.card-text= product.description
-                  button.btn.btn-outline-dark.product-more Подробнее
+    head
+        meta(charset="UTF-8")
+        title= settings.title
+        link(rel="stylesheet" href="css/index.css")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="css/bootstrap.min.css")
+        link(href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet")
+        .section1(id="navbar")
+            .container
+                .header
+                    .container
+                        .head
+                            .row.pt-lg-3
+                                .col-lg-3
+                                    button.navbar-toggler.d-lg-none(type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation")
+                                        span
+                                            i.bx.bx-menu-alt-left.icon-menu
+                                    .navbar-brand(href="#")
+                                        img(src=settings.image alt="")
+                                .col-lg-2.ab
+                                    span
+                                        img(src="SVG/Icon%20weather-time-9.svg" alt="")
+                                    dl
+                                        dt Рабочее время
+                                        dd Пон-Суб: 9-20
+                                .col-lg-4.ab(style="padding-right: 0; padding-left: 0")
+                                    span
+                                        img(src="SVG/Icon%20awesome-location-arrow.svg" alt="")
+                                    dl
+                                        dt Расположение
+                                        dd= settings.adress
+                                .col-lg-3.ab
+                                    span
+                                        img(src="SVG/Icon%20awesome-phone-alt.svg" alt="")
+                                    dl
+                                        dt Колл-центр
+                                        dd= settings.phone
 
-    .section7
-      .container
-        h1
-          | РЕЗУЛТАТЫ РАБОТЫ&nbsp;
-          span(style="background-color: #484848; color: whitesmoke") ЗА 2020 ГОД
-        br
-        br
-        .row
-          .col-lg-4
-            h2
-              span.count-first 2500
-              | +
-            p.p1
-              | -
-              img(src="SVG/contract.svg" alt="")
-              |  -
-            p.p2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, rem!
-          .col-lg-4
-            h2
-              span.count-second 30
-              | +
-            p.p1
-              | -
-              img(src="SVG/location.svg" alt="")
-              |  -
-            p.p2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, rem!
-          .col-lg-4
-            h2
-              span.count-third 12.0
-              span(style="font-size: 30px") млн $
-            p.p1
-              | -
-              img(src="SVG/money.svg" alt="")
-              |  -
-            p.p2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, rem!
-        br
-        br
-    .section8(id="uslugi")
-      .container
-        .div
-          h2
-            | УСЛУГИ ВЕД ПО СТРАНАМ
-            span(style="background-color: #484848; color: whitesmoke") -ЭКСПОРТ/ИМПОРТ
-          .badge.badge-dark .
-          p(style="color: grey")= settings.references
-        .row
-          .col-lg-3.mt-4
-            .box
-              img(src="images/okno_5_1.png" alt="")
-              h2 Казахстан
-              button.btn.btn-outline-dark Подробнее
-          .col-lg-3.mt-4
-            .box
-              img(src="images/okno_5_2.png" alt="")
-              h2 Беларусь
-              button.btn.btn-outline-dark Подробнее
-          .col-lg-3.mt-4
-            .box
-              img(src="images/okno_5_3.png" alt="")
-              h2 Киргизия
-              button.btn.btn-outline-dark Подробнее
-          .col-lg-3.mt-4
-            .box
-              img(src="images/okno_5_4.png" alt="")
-              h2 Армения
-              button.btn.btn-outline-dark Подробнее
-          .col-lg-3.mt-4
-            .box
-              img(src="images/okno_5_6.png" alt="")
-              h2 Таджикистан
-              button.btn.btn-outline-dark Подробнее
-          .col-lg-3.mt-4
-            .box
-              img(src="images/okno_5_7.png" alt="")
-              h2 Украина
-              button.btn.btn-outline-dark Подробнее
-          .col-lg-3.mt-4
-            .box
-              img(src="images/okno_5_8.png" alt="")
-              h2 Азарбайжан
-              button.btn.btn-outline-dark Подробнее
-          .col-lg-3.mt-4
-            .box
-              img(src="images/okno_5_9.png" alt="")
-              h2 Молдова
-              button.btn.btn-outline-dark Подробнее
-        br
-        br
-        .row
-          .col-lg-3.offset-lg-3
-            .input-group.mb-3
-              .input-group-prepend
-                span.input-group-text.btn-dark.bg-dark
-                  img(src="SVG/Icon%20material-language.svg" alt="")
-              input.form-control(type="text" placeholder="Все страны")
-          .col-lg-3
-            .input-group.mb-3
-              input.form-control(type="search" placeholder="Поиск страны")
-              .input-group-append
-                span.input-group-text.btn-dark.bg-dark
-                  img(src="SVG/Icon%20feather-search.svg" alt="")
-        br
-        br
-    .section9
-      .container
-        .row
-          .col-lg-7
-            h2.text-break
-              | РАССЧИТАТЬ СТОИМОСТЬ&nbsp;
-              span(style="background-color: #484848; color: whitesmoke") ДОСТАВКИ
-            br
-            p(style="font-size: 20px")
-              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque dicta
-              | distinctio earum facere fugiat
-            br
-          .col-lg-3.offset-lg-2.pt-lg-5.mb-4
-            .input-group
-              .input-group-prepend
-                span.input-group-text.btn-warning.bg-warning
-                  img(src="SVG/calculator%20·%20finance%20·%20business%20·%20calculation%20·%20money.svg" alt="")
-              input.form-control(type="text" placeholder="Отправить Запрос")
-    .section10
-      .container
-        .div
-          br
-          h2
-            | УСЛУГИ В СФЕРЕ ВЕД.&nbsp;
-            span(style="background-color: #484848; color: whitesmoke") АУТСОРСИНГ ВЭД
-          .badge.badge-dark .
-          p(style="color: grey")
-            | Lorem ipsum dolor sit amet, consectetur adipisicing elit Lorem ipsum dolor sit amet,
-            | consectetur adipisicing elit.
-          br
-        .row
-          .col-lg-3
-            .box
-              img(src="SVG/work.svg" alt="")
-              h4.mt-lg-2 АУТСОРСИНГ ВЕД
-              .badge .
-              p
-                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta dolor dolorum esse nobis
-                | quisquam?
-          .col-lg-3
-            .box
-              img(src="SVG/businessman.svg" alt="")
-              h4.mt-lg-2 АУТСОРСИНГ ВЕД
-              .badge .
-              p
-                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta dolor dolorum esse nobis
-                | quisquam?
-          .col-lg-3
-            .box
-              img(src="SVG/certificate.svg" alt="")
-              h4.mt-lg-2 АУТСОРСИНГ ВЕД
-              .badge .
-              p
-                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta dolor dolorum esse nobis
-                | quisquam?
-          .col-lg-3
-            .box
-              img(style="width: 64px" src="SVG/contract.svg" alt="")
-              h4.mt-lg-2 АУТСОРСИНГ ВЕД
-              .badge .
-              p
-                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta dolor dolorum esse nobis
-                | quisquam?
-        br
-    .section11
-      .container
-        .row
-          .col-lg-6
-            .box
-              br
-              br
-              br
-              h2.text-break
-                | ПОЛЕЗНАЯ
-                span(style="background-color: #484848; color: whitesmoke") ИНФОРМАЦИЯ
-              .badge.badge-dark .
-              br
-              .list
-                p
-                  i.bx.bx-right-arrow-circle.mr-3
-                  | Ставки томоженных сборов
-                p
-                  i.bx.bx-right-arrow-circle.mr-3
-                  | Товары двойного назначения
-                p
-                  i.bx.bx-right-arrow-circle.mr-3
-                  | Выбор перевозчика
-                p
-                  i.bx.bx-right-arrow-circle.mr-3
-                  | Участникам ВЕД
-                p
-                  i.bx.bx-right-arrow-circle.mr-3
-                  | Докементы для экспорт/импорт
-                p
-                  i.bx.bx-right-arrow-circle.mr-3
-                  | Схема экспорт/импортной сделки
-                p
-                  i.bx.bx-right-arrow-circle.mr-3
-                  | Внешнеторговый контракть
-    .section12
-      .container.pt-lg-5
-        h2
-          | ЭКСПОРТ/ИМПОРТ&nbsp;
-          span(style="background-color: #484848; color: whitesmoke") ПО СТРАНАМ
-        br
-        .row
-          .col-lg-1
-            img(src="SVG/united-states.svg" alt="")
-            p США
-          .col-lg-1.offset-lg-1
-            img(src="SVG/germany.svg" alt="")
-            p Германия
-          .col-lg-1.offset-lg-1
-            img(src="SVG/russia.svg" alt="")
-            p Россия
-          .col-lg-1.offset-lg-1
-            img(src="SVG/china.svg" alt="")
-            p Китай
-          .col-lg-1.offset-lg-1
-            img(src="SVG/turkey.svg" alt="")
-            p Турция
-          .col-lg-1.offset-lg-1
-            img(src="SVG/uzbekistan.svg" alt="")
-            p Узбекистан
-        br
-        .row
-          .col-lg-3.offset-lg-4
-            .input-group
-              .input-group-prepend
-                span.input-group-text.btn-dark.bg-dark
-                  img(src="SVG/Icon%20material-language.svg" alt="")
-              input.form-control(type="text" placeholder="Все страны")
-    .section13
-      .container-fluid.pt-lg-5
-        .div
-          h2
-            span(style="background-color: #484848; color: whitesmoke") НОВОСТИ
-        br
-        #demo.carousel.slide(data-ride="carousel")
-          // Indicators
-          // The slideshow
-          .p-3.carousel-inner
-            .carousel-item.active
-              .container
+                        hr
+                        .row
+                            .col-lg-8.offset-lg-4
+                                nav.navbar.navbar-expand-lg.navbar-white.bg-transparent
+                                    #navbarTogglerDemo03.collapse.navbar-collapse
+                                        ul.navbar-nav.mr-auto.mt-2.mt-lg-0
+                                            li.nav-item.mx-lg-2
+                                                a.a.nav-link(href="#") ГЛАВНАЯ
+                                            li.nav-item.mx-lg-6
+                                                a.a.nav-link(style="margin: 0;padding-left: 0" href="#vid")
+                                                    | ВИДЫ ДЕЯТЕЛЬНОСТИ
+                                            li.nav-item.mx-lg-2
+                                                a.a.nav-link(href="#uslugi") УСЛУГИ
+                                            li.nav-item.mx-lg-2
+                                                a.a.nav-link(href="#productsiya") ПРОДУКЦИЯ
+                                            li.nav-item.mx-lg-2
+                                                a.a.nav-link(href="#kontakti") КОНТАКТЫ
+                                            li.nav-item.mx-lg-2
+                                                .form-group.p-1
+                                                    select#lang-select.form-control.form-control-sm.bg-transparent.text-white
+                                                        option.text-dark(value="uz" selected=(lang === 'uz'))
+                                                            | UZ
+                                                        option.text-dark(value="ru" selected=(lang === 'ru'))
+                                                            | RU
+                                                        option.text-dark(value="en" selected=(lang === 'en'))
+                                                            | EN
+
+            .container
+                .box
+                    br
+                    br
+                    br
+                    br
+                    br
+                    br
+                    h1.text-break
+                        | ЭКСПОРТ И ИМПОРТ
+                        br
+                        |  СЕЛЬСКОХЗЯЙСТВЕННОЙ ПРОДУКЦИИ
+                    p.text-break= settings.description
+                    br
+                    br
+                    .row.mt-5
+                        .col-lg-4
+                            button.w-100.btn
+                                img(src="SVG/Icon%20ionic-ios-mail.svg" alt="")
+                                b Отправить запрос
+                        .col-lg-4
+                            button.w-100.btn
+                                img(src="SVG/Icon%20ionic-md-chatboxes.svg" alt="")
+                                b Задать вопрос
+                        .col-lg-4
+                            button.w-100.btn
+                                img(src="SVG/Icon%20awesome-phone-alt.svg" alt="")
+                                b Обратный звонок
+                    br
+                    br
+        .section2
+            .container
+                .row.my-lg-5
+                    .col-lg-6
+                        h1.text-break.pt-4.heading
+                            | ДОБРО&nbsp;
+                            span(style="background-color: #484848; color: whitesmoke") ПОЖАЛОВАТЬ
+                        .badge.badge-dark .
+                        p(style="color: grey")
+                            | Все наши услуги и инвестиции направлены на предложение лучших решений
+                        p= settings.aboutUS
+                        .row
+                            .col-lg-9
+                                h5
+                                    b Xurshid Istamov
+                                p Директор компании...
+                            .col-lg-3
+                                img(src="" alt="")
+                    .col-lg-6
+                        img.img-fluid(src="images/transportation-logistics_37416-135.png" alt="")
+        .section3(id="vid")
+            .container.py-lg-5
+                h2.pt-4.heading
+                    | ВИДЫ&nbsp;
+                    span(style="background-color: #484848; color: whitesmoke") ДЕЯТЕЛЬНОСТИ
+                .badge.badge-dark .
+                p(style="color: grey") Lorem ipsum dolor sit amet, consectetur adipisicing elit
                 .row
-                  .col-lg-4
-                    .box
-                      img(src="images/okno_5_1.png" alt="")
-                      h5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, quis!
-                      i.bx.bx-calendar-event
-                      span.ml-1 2020-06-21
-                      i.bx.bxs-show.ml-3
-                      span.ml-1 547
-                      p
-                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores delectus
-                        | numquam quisquam,
-                        | saepe unde vero?
-                      button.btn.btn-outline-dark Подробнее
-                  .col-lg-4
-                    .box
-                      img(src="images/okno_5_2.png" alt="")
-                      h5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, quis!
-                      i.bx.bx-calendar-event
-                      span.ml-1 2020-06-21
-                      i.bx.bxs-show.ml-3
-                      span.ml-1 547
-                      p
-                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores delectus
-                        | numquam quisquam,
-                        | saepe unde vero?
-                      button.btn.btn-outline-dark Подробнее
-                  .col-lg-4
-                    .box
-                      img(src="images/okno_5_3.png" alt="")
-                      h5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, quis!
-                      i.bx.bx-calendar-event
-                      span.ml-1 2020-06-21
-                      i.bx.bxs-show.ml-3
-                      span.ml-1 547
-                      p
-                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores delectus
-                        | numquam quisquam,
-                        | saepe unde vero?
-                      button.btn.btn-outline-dark Подробнее
-            .carousel-item
-              .container
+                    .col-lg-3
+                        .card
+                            .card-body
+                                img.card-img-top.w-100(src="images/Пересечение%204.png" alt="")
+                                h5.mt-lg-2
+                                    | ЭКСПОРТ
+                                    br
+                                    |  ТОВАРОВ
+                                .badge .
+                                p
+                                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci asperiores consequatur
+                                    | corporis dolorem fugiat similique.
+                                button.btn.btn-outline-dark Подробнее
+                    .col-lg-3
+                        .card
+                            .card-body
+                                img.card-img-top.w-100(src="images/Пересечение%206.png" alt="")
+                                h5.mt-lg-2
+                                    | ИМПОРТ
+                                    br
+                                    |  ТОВАРОВ
+                                .badge .
+                                p
+                                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci asperiores consequatur
+                                    | corporis dolorem fugiat similique.
+                                button.btn.btn-outline-dark Подробнее
+                    .col-lg-3
+                        .card
+                            .card-body
+                                img.card-img-top.w-100(src="images/Пересечение%207.png" alt="")
+                                h5.mt-lg-2
+                                    | МЕЖДУНАРОДНЫЕ
+                                    br
+                                    |  ПЕРЕВОЗКИ
+                                .badge .
+                                p
+                                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci asperiores consequatur
+                                    | corporis dolorem fugiat similique.
+                                button.btn.btn-outline-dark Подробнее
+                    .col-lg-3
+                        .card
+                            .card-body
+                                img.card-img-top.w-100(src="images/Пересечение%208.png" alt="")
+                                h5.mt-lg-2
+                                    | УСЛУГИ
+                                    br
+                                    |  В СФЕРЕ ВЭД
+                                .badge .
+                                p
+                                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci asperiores consequatur
+                                    | corporis dolorem fugiat similique.
+                                button.btn.btn-outline-dark Подробнее
+        .section4
+            .container
+                .row.my-lg-5
+                    .col-lg-6
+                        img.img-fluid(src="SVG/Сгруппировать%2023.svg" alt="")
+                    .col-lg-6
+                        h2.text-break.pt-4.heading
+                            | О КОМПАНИИ&nbsp;
+                            span(style="background-color:  #484848; color: whitesmoke") "UZIMPEX" LLC
+                        .badge.badge-dark .
+                        p(style="color: grey")= settings.aboutUS
+        .section5
+            .container.py-lg-5
+                br
+                br
                 .row
-                  .col-lg-4
-                    .box
-                      img(src="images/okno_5_1.png" alt="")
-                      h5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, quis!
-                      i.bx.bx-calendar-event
-                      span.ml-1 2020-06-21
-                      i.bx.bxs-show.ml-3
-                      span.ml-1 547
-                      p
-                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores delectus
-                        | numquam quisquam,
-                        | saepe unde vero?
-                      button.btn.btn-outline-dark Подробнее
-                  .col-lg-4
-                    .box
-                      img(src="images/okno_5_2.png" alt="")
-                      h5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, quis!
-                      i.bx.bx-calendar-event
-                      span.ml-1 2020-06-21
-                      i.bx.bxs-show.ml-3
-                      span.ml-1 547
-                      p
-                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores delectus
-                        | numquam quisquam,
-                        | saepe unde vero?
-                      button.btn.btn-outline-dark Подробнее
-                  .col-lg-4
-                    .box
-                      img(src="images/okno_5_3.png" alt="")
-                      h5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, quis!
-                      i.bx.bx-calendar-event
-                      span.ml-1 2020-06-21
-                      i.bx.bxs-show.ml-3
-                      span.ml-1 547
-                      p
-                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores delectus
-                        | numquam quisquam,
-                        | saepe unde vero?
-                      button.btn.btn-outline-dark Подробнее
-            .carousel-item
-              .container
+                    .col-lg-6
+                        h1.pt-4.heading
+                            | НАША
+                            span(style="background-color:  #484848; color: whitesmoke") ЦЕЛЬ
+                        p(style="font-size: 20px")
+                            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque dicta
+                            | distinctio earum facere fugiat
+                            | illum in ipsa odio praesentium quo similique, tenetur voluptate voluptatem. A aperiam blanditiis
+                            | consequatur culpa enim ex fugiat ipsa itaque magnam, maiores natus nihil nobis odit placeat porro
+                            | quis quod repellat sed sint unde ut vero?
+                        br
+                        button.btn.btn-outline-dark Подробнее
+                        br
+                        br
+        .section6(id="productsiya")
+            .container.py-lg-5.pb-0
+                .head
+                    h2.text-break.pt-4.heading
+                        | ЭКСПОРТИРУЕМАЯ&nbsp;
+                        span(style="background-color:  #484848; color: whitesmoke") ПРОДУКЦИЯ
+                    .badge.badge-dark .
+                    p(style="color: grey") Lorem ipsum dolor sit amet, consectetur adipisicing elit
                 .row
-                  .col-lg-4
-                    .box
-                      img(src="images/okno_5_1.png" alt="")
-                      h5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, quis!
-                      span
-                        i.bx.bx-calendar-event 2020-06-21
-                      span
-                        i.bx.bxs-show 547
-                      p
-                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores delectus
-                        | numquam quisquam,
-                        | saepe unde vero?
-                      button.btn.btn-outline-dark Подробнее
-                  .col-lg-4
-                    .box
-                      img(src="images/okno_5_2.png" alt="")
-                      h5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, quis!
-                      i.bx.bx-calendar-event
-                      span.ml-1 2020-06-21
-                      i.bx.bxs-show.ml-3
-                      span.ml-1 547
-                      p
-                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores delectus
-                        | numquam quisquam,
-                        | saepe unde vero?
-                      button.btn.btn-outline-dark Подробнее
-                  .col-lg-4
-                    .box
-                      img(src="images/okno_5_3.png" alt="")
-                      h5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, quis!
-                      i.bx.bx-calendar-event
-                      span.ml-1 2020-06-21
-                      i.bx.bxs-show.ml-3
-                      span.ml-1 547
-                      p
-                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores delectus
-                        | numquam quisquam,
-                        | saepe unde vero?
-                      button.btn.btn-outline-dark Подробнее
-          ul.carousel-indicators.mt-5.invisible
-            li.active(data-target="#demo" data-slide-to="0")
-            li(data-target="#demo" data-slide-to="1")
-            li(data-target="#demo" data-slide-to="2")
-          // Left and right controls
-          a.carousel-control-prev(href="#demo" data-slide="prev")
-            i.bx.bx-chevron-left.icon-48.text-dark
-          a.carousel-control-next(href="#demo" data-slide="next")
-            i.bx.bx-chevron-right.icon-48.text-dark
-    .section14.mt-lg-5(id="kontakti")
-      .container
-        .row.pt-lg-4
-          .col-lg-8.offset-lg-4
-            nav.navbar.navbar-expand-lg.navbar-white.bg-transparent
-              #navbarTogglerDemo02.collapse.navbar-collapse
-                ul.navbar-nav.mr-auto.mt-2.mt-lg-0
-                  li.nav-item.mx-lg-3
-                    a.nav-link(href="#") ГЛАВНАЯ
-                  li.nav-item.mx-lg-3
-                    a.nav-link(style="margin: 0;padding-left: 0;padding-right: 0" href="#")
-                      | ВИДЫ
-                      | ДЕЯТЕЛЬНОСТИ
-                  li.nav-item.mx-lg-3
-                    a.nav-link(href="#") УСЛУГИ
-                  li.nav-item.mx-lg-3
-                    a.nav-link(href="#") ПРОДУКЦИЯ
-                  li.nav-item.mx-lg-3
-                    a.nav-link(href="#") КОНТАКТЫ
-        hr
+                    for product in products
+                        .col-lg-6.mb-4
+                            .card.border-0
+                                img.card-img-top(src=product.image alt="..." style="max-height: 300px")
+                                .card-body.mr-4.ml-4.border.mt-n5.bg-white
+                                    h5.card-title= product.title
+                                    p.text-truncate.card-text= product.description
+                                    button.btn.btn-outline-dark.product-more Подробнее
+
+        .section7
+            .container
+                h1.pt-4.heading
+                    | РЕЗУЛТАТЫ РАБОТЫ&nbsp;
+                    span(style="background-color: #484848; color: whitesmoke") ЗА 2020 ГОД
+                br
+                br
+                .row
+                    .col-lg-4
+                        h2
+                            span.count-first 2500
+                            | +
+                        p.p1
+                            | -
+                            img(src="SVG/contract.svg" alt="")
+                            |  -
+                        p.p2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, rem!
+                    .col-lg-4
+                        h2
+                            span.count-second 30
+                            | +
+                        p.p1
+                            | -
+                            img(src="SVG/location.svg" alt="")
+                            |  -
+                        p.p2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, rem!
+                    .col-lg-4
+                        h2
+                            span.count-third 12.0
+                            span(style="font-size: 30px") млн $
+                        p.p1
+                            | -
+                            img(src="SVG/money.svg" alt="")
+                            |  -
+                        p.p2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, rem!
+                br
+                br
+        .section8(id="uslugi")
+            .container
+                .div
+                    h2.pt-4.heading
+                        | УСЛУГИ ВЕД ПО СТРАНАМ
+                        span(style="background-color: #484848; color: whitesmoke") -ЭКСПОРТ/ИМПОРТ
+                    .badge.badge-dark .
+                    p(style="color: grey")= settings.references
+                .row
+                    .col-lg-3.mt-4
+                        .box
+                            img(src="images/okno_5_1.png" alt="")
+                            h2 Казахстан
+                            button.btn.btn-outline-dark Подробнее
+                    .col-lg-3.mt-4
+                        .box
+                            img(src="images/okno_5_2.png" alt="")
+                            h2 Беларусь
+                            button.btn.btn-outline-dark Подробнее
+                    .col-lg-3.mt-4
+                        .box
+                            img(src="images/okno_5_3.png" alt="")
+                            h2 Киргизия
+                            button.btn.btn-outline-dark Подробнее
+                    .col-lg-3.mt-4
+                        .box
+                            img(src="images/okno_5_4.png" alt="")
+                            h2 Армения
+                            button.btn.btn-outline-dark Подробнее
+                    .col-lg-3.mt-4
+                        .box
+                            img(src="images/okno_5_6.png" alt="")
+                            h2 Таджикистан
+                            button.btn.btn-outline-dark Подробнее
+                    .col-lg-3.mt-4
+                        .box
+                            img(src="images/okno_5_7.png" alt="")
+                            h2 Украина
+                            button.btn.btn-outline-dark Подробнее
+                    .col-lg-3.mt-4
+                        .box
+                            img(src="images/okno_5_8.png" alt="")
+                            h2 Азарбайжан
+                            button.btn.btn-outline-dark Подробнее
+                    .col-lg-3.mt-4
+                        .box
+                            img(src="images/okno_5_9.png" alt="")
+                            h2 Молдова
+                            button.btn.btn-outline-dark Подробнее
+                br
+                br
+                .row
+                    .col-lg-3.offset-lg-3
+                        .input-group.mb-3
+                            .input-group-prepend
+                                span.input-group-text.btn-dark.bg-dark
+                                    img(src="SVG/Icon%20material-language.svg" alt="")
+                            input.form-control(type="text" placeholder="Все страны")
+                    .col-lg-3
+                        .input-group.mb-3
+                            input.form-control(type="search" placeholder="Поиск страны")
+                            .input-group-append
+                                span.input-group-text.btn-dark.bg-dark
+                                    img(src="SVG/Icon%20feather-search.svg" alt="")
+                br
+                br
+        .section9
+            .container
+                .row
+                    .col-lg-7
+                        h2.text-break.pt-4.heading
+                            | РАССЧИТАТЬ СТОИМОСТЬ&nbsp;
+                            span(style="background-color: #484848; color: whitesmoke") ДОСТАВКИ
+                        br
+                        p(style="font-size: 20px")
+                            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque dicta
+                            | distinctio earum facere fugiat
+                        br
+                    .col-lg-3.offset-lg-2.pt-lg-5.mb-4
+                        .input-group
+                            .input-group-prepend
+                                span.input-group-text.btn-warning.bg-warning
+                                    img(src="SVG/calculator%20·%20finance%20·%20business%20·%20calculation%20·%20money.svg" alt="")
+                            input.form-control(type="text" placeholder="Отправить Запрос")
+        .section10
+            .container
+                .div
+                    br
+                    h2.pt-4.heading
+                        | УСЛУГИ В СФЕРЕ ВЕД.&nbsp;
+                        span(style="background-color: #484848; color: whitesmoke") АУТСОРСИНГ ВЭД
+                    .badge.badge-dark .
+                    p(style="color: grey")
+                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit Lorem ipsum dolor sit amet,
+                        | consectetur adipisicing elit.
+                    br
+                .row
+                    .col-lg-3
+                        .box
+                            img(src="SVG/work.svg" alt="")
+                            h4.mt-lg-2 АУТСОРСИНГ ВЕД
+                            .badge .
+                            p
+                                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta dolor dolorum esse nobis
+                                | quisquam?
+                    .col-lg-3
+                        .box
+                            img(src="SVG/businessman.svg" alt="")
+                            h4.mt-lg-2 АУТСОРСИНГ ВЕД
+                            .badge .
+                            p
+                                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta dolor dolorum esse nobis
+                                | quisquam?
+                    .col-lg-3
+                        .box
+                            img(src="SVG/certificate.svg" alt="")
+                            h4.mt-lg-2 АУТСОРСИНГ ВЕД
+                            .badge .
+                            p
+                                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta dolor dolorum esse nobis
+                                | quisquam?
+                    .col-lg-3
+                        .box
+                            img(style="width: 64px" src="SVG/contract.svg" alt="")
+                            h4.mt-lg-2 АУТСОРСИНГ ВЕД
+                            .badge .
+                            p
+                                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta dolor dolorum esse nobis
+                                | quisquam?
+                br
+        .section11
+            .container
+                .row
+                    .col-lg-6
+                        .box
+                            br
+                            br
+                            br
+                            h2.text-break.pt-4.heading
+                                | ПОЛЕЗНАЯ
+                                span(style="background-color: #484848; color: whitesmoke") ИНФОРМАЦИЯ
+                            .badge.badge-dark .
+                            br
+                            .list
+                                p
+                                    i.bx.bx-right-arrow-circle.mr-3
+                                    | Ставки томоженных сборов
+                                p
+                                    i.bx.bx-right-arrow-circle.mr-3
+                                    | Товары двойного назначения
+                                p
+                                    i.bx.bx-right-arrow-circle.mr-3
+                                    | Выбор перевозчика
+                                p
+                                    i.bx.bx-right-arrow-circle.mr-3
+                                    | Участникам ВЕД
+                                p
+                                    i.bx.bx-right-arrow-circle.mr-3
+                                    | Докементы для экспорт/импорт
+                                p
+                                    i.bx.bx-right-arrow-circle.mr-3
+                                    | Схема экспорт/импортной сделки
+                                p
+                                    i.bx.bx-right-arrow-circle.mr-3
+                                    | Внешнеторговый контракть
+        .section12
+            .container.pt-lg-5
+                h2.pt-4.heading
+                    | ЭКСПОРТ/ИМПОРТ&nbsp;
+                    span(style="background-color: #484848; color: whitesmoke") ПО СТРАНАМ
+                br
+                .row
+                    .col-lg-1
+                        img(src="SVG/united-states.svg" alt="")
+                        p США
+                    .col-lg-1.offset-lg-1
+                        img(src="SVG/germany.svg" alt="")
+                        p Германия
+                    .col-lg-1.offset-lg-1
+                        img(src="SVG/russia.svg" alt="")
+                        p Россия
+                    .col-lg-1.offset-lg-1
+                        img(src="SVG/china.svg" alt="")
+                        p Китай
+                    .col-lg-1.offset-lg-1
+                        img(src="SVG/turkey.svg" alt="")
+                        p Турция
+                    .col-lg-1.offset-lg-1
+                        img(src="SVG/uzbekistan.svg" alt="")
+                        p Узбекистан
+                br
+                .row
+                    .col-lg-3.offset-lg-4
+                        .input-group
+                            .input-group-prepend
+                                span.input-group-text.btn-dark.bg-dark
+                                    img(src="SVG/Icon%20material-language.svg" alt="")
+                            input.form-control(type="text" placeholder="Все страны")
+        .section13
+            .container-fluid.pt-lg-5
+                .div
+                    h2.pt-4.heading
+                        span(style="background-color: #484848; color: whitesmoke") НОВОСТИ
+                br
+
+                #demo.carousel.slide(data-ride="carousel")
+                    // Indicators
+                    // The slideshow
+                    .p-3.carousel-inner
+                        .carousel-item.active
+                            .container
+                                .row
+                                    .col-lg-4
+                                        .box.mb-3
+                                            img(src="images/okno_5_1.png" alt="")
+                                            h5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, quis!
+                                            i.bx.bx-calendar-event
+                                            span.ml-1 2020-06-21
+                                            i.bx.bxs-show.ml-3
+                                            span.ml-1 547
+                                            p
+                                                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores delectus
+                                                | numquam quisquam,
+                                                | saepe unde vero?
+                                            button.btn.btn-outline-dark Подробнее
+                                    .col-lg-4
+                                        .box.mb-3
+                                            img(src="images/okno_5_2.png" alt="")
+                                            h5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, quis!
+                                            i.bx.bx-calendar-event
+                                            span.ml-1 2020-06-21
+                                            i.bx.bxs-show.ml-3
+                                            span.ml-1 547
+                                            p
+                                                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores delectus
+                                                | numquam quisquam,
+                                                | saepe unde vero?
+                                            button.btn.btn-outline-dark Подробнее
+                                    .col-lg-4
+                                        .box.mb-3
+                                            img(src="images/okno_5_3.png" alt="")
+                                            h5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, quis!
+                                            i.bx.bx-calendar-event
+                                            span.ml-1 2020-06-21
+                                            i.bx.bxs-show.ml-3
+                                            span.ml-1 547
+                                            p
+                                                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores delectus
+                                                | numquam quisquam,
+                                                | saepe unde vero?
+                                            button.btn.btn-outline-dark Подробнее
+                        .carousel-item
+                            .container
+                                .row
+                                    .col-lg-4
+                                        .box.mb-3
+                                            img(src="images/okno_5_1.png" alt="")
+                                            h5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, quis!
+                                            i.bx.bx-calendar-event
+                                            span.ml-1 2020-06-21
+                                            i.bx.bxs-show.ml-3
+                                            span.ml-1 547
+                                            p
+                                                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores delectus
+                                                | numquam quisquam,
+                                                | saepe unde vero?
+                                            button.btn.btn-outline-dark Подробнее
+                                    .col-lg-4
+                                        .box.mb-3
+                                            img(src="images/okno_5_2.png" alt="")
+                                            h5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, quis!
+                                            i.bx.bx-calendar-event
+                                            span.ml-1 2020-06-21
+                                            i.bx.bxs-show.ml-3
+                                            span.ml-1 547
+                                            p
+                                                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores delectus
+                                                | numquam quisquam,
+                                                | saepe unde vero?
+                                            button.btn.btn-outline-dark Подробнее
+                                    .col-lg-4
+                                        .box.mb-3
+                                            img(src="images/okno_5_3.png" alt="")
+                                            h5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, quis!
+                                            i.bx.bx-calendar-event
+                                            span.ml-1 2020-06-21
+                                            i.bx.bxs-show.ml-3
+                                            span.ml-1 547
+                                            p
+                                                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores delectus
+                                                | numquam quisquam,
+                                                | saepe unde vero?
+                                            button.btn.btn-outline-dark Подробнее
+                        .carousel-item
+                            .container
+                                .row
+                                    .col-lg-4
+                                        .box.mb-3
+                                            img(src="images/okno_5_1.png" alt="")
+                                            h5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, quis!
+                                            span
+                                                i.bx.bx-calendar-event 2020-06-21
+                                            span
+                                                i.bx.bxs-show 547
+                                            p
+                                                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores delectus
+                                                | numquam quisquam,
+                                                | saepe unde vero?
+                                            button.btn.btn-outline-dark Подробнее
+                                    .col-lg-4
+                                        .box.mb-3
+                                            img(src="images/okno_5_2.png" alt="")
+                                            h5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, quis!
+                                            i.bx.bx-calendar-event
+                                            span.ml-1 2020-06-21
+                                            i.bx.bxs-show.ml-3
+                                            span.ml-1 547
+                                            p
+                                                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores delectus
+                                                | numquam quisquam,
+                                                | saepe unde vero?
+                                            button.btn.btn-outline-dark Подробнее
+                                    .col-lg-4
+                                        .box.mb-3
+                                            img(src="images/okno_5_3.png" alt="")
+                                            h5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, quis!
+                                            i.bx.bx-calendar-event
+                                            span.ml-1 2020-06-21
+                                            i.bx.bxs-show.ml-3
+                                            span.ml-1 547
+                                            p
+                                                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores delectus
+                                                | numquam quisquam,
+                                                | saepe unde vero?
+                                            button.btn.btn-outline-dark Подробнее
+                    ul.carousel-indicators.mt-5.invisible
+                        li.active(data-target="#demo" data-slide-to="0")
+                        li(data-target="#demo" data-slide-to="1")
+                        li(data-target="#demo" data-slide-to="2")
+                    // Left and right controls
+                    a.carousel-control-prev(href="#demo" data-slide="prev")
+                        i.bx.bx-chevron-left.icon-48.text-dark
+                    a.carousel-control-next(href="#demo" data-slide="next")
+                        i.bx.bx-chevron-right.icon-48.text-dark
+        .section14.mt-lg-5(id="kontakti")
+            .container
+                .row.pt-lg-4
+                    .col-lg-8.offset-lg-4
+                        nav.navbar.navbar-expand-lg.navbar-white.bg-transparent
+                            #navbarTogglerDemo02.collapse.navbar-collapse
+                                ul.navbar-nav.mr-auto.mt-2.mt-lg-0
+                                    li.nav-item.mx-lg-3
+                                        a.nav-link(href="#") ГЛАВНАЯ
+                                    li.nav-item.mx-lg-3
+                                        a.nav-link(style="margin: 0;padding-left: 0;padding-right: 0" href="#")
+                                            | ВИДЫ
+                                            | ДЕЯТЕЛЬНОСТИ
+                                    li.nav-item.mx-lg-3
+                                        a.nav-link(href="#") УСЛУГИ
+                                    li.nav-item.mx-lg-3
+                                        a.nav-link(href="#") ПРОДУКЦИЯ
+                                    li.nav-item.mx-lg-3
+                                        a.nav-link(href="#") КОНТАКТЫ
+                hr
+                br
+                .row
+                    .col-lg-3.rasm
+                        p Мы в социальных медиа
+                        a(href=settings.instagram target="_blank")
+                            .badge
+                                i.bx.bxl-instagram.icon
+                        a(href=settings.facebook target="_blank")
+                            .badge
+                                i.bx.bxl-facebook.icon
+                        a(href=settings.twitter target="_blank")
+                            .badge
+                                i.bx.bxl-twitter.icon
+                    .col-lg-2.offset-lg-3
+                        span
+                            img(src="SVG/Icon%20weather-time-9.svg" alt="")
+                        dl
+                            dt Рабочее время
+                            dd Пон-Суб: 9-20
+                    .col-lg-2(style="padding-left: 0; padding-right: 0")
+                        span
+                            img(src="SVG/Icon%20awesome-location-arrow.svg" alt="")
+                        dl
+                            dt Расположение
+                            dd= settings.adress
+                    .col-lg-2
+                        span
+                            img(src="SVG/Icon%20awesome-phone-alt.svg" alt="")
+                        dl
+                            dt Колл-центр
+                            dd= settings.phone
+                br
+            .foot.pt-lg-3(style="background-color: #666666")
+                .container
+                    .row
+                        .col-lg-3
+                            p 2008-2020 "UZIMPEX" LLC
+                        .col-lg-4.offset-lg-5
+                            p Copyright UMDSOFT. Все права защищены
         br
-        .row
-          .col-lg-3.rasm
-            p Мы в социальных медиа
-            a(href=settings.instagram target="_blank")
-              .badge
-                i.bx.bxl-instagram.icon
-            a(href=settings.facebook target="_blank")
-              .badge
-                i.bx.bxl-facebook.icon
-            a(href=settings.twitter target="_blank")
-              .badge
-                i.bx.bxl-twitter.icon
-          .col-lg-2.offset-lg-3
-            span
-              img(src="SVG/Icon%20weather-time-9.svg" alt="")
-            dl
-              dt Рабочее время
-              dd Пон-Суб: 9-20
-          .col-lg-2(style="padding-left: 0; padding-right: 0")
-            span
-              img(src="SVG/Icon%20awesome-location-arrow.svg" alt="")
-            dl
-              dt Расположение
-              dd= settings.adress
-          .col-lg-2
-            span
-              img(src="SVG/Icon%20awesome-phone-alt.svg" alt="")
-            dl
-              dt Колл-центр
-              dd= settings.phone
-        br
-      .foot.pt-lg-3(style="background-color: #666666")
-        .container
-          .row
-            .col-lg-3
-              p 2008-2020 "UZIMPEX" LLC
-            .col-lg-4.offset-lg-5
-              p Copyright UMDSOFT. Все права защищены
-    br
-    a(href="#navbar")
-      .round
-        i.bx.bx-chevron-up.icon
-  script(src="js/jquery-3.3.1.slim.min.js")
-  script(src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js")
-  script(src="js/popper.min.js")
-  script(src="js/bootstrap.min.js")
-  script(src="js/animation-count.js")
-  script(src="js/animationCounter.js")
-  script(src="js/script.js")
+        a(href="#navbar")
+            .round
+                i.bx.bx-chevron-up.icon
+    script(src="js/jquery-3.3.1.slim.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js")
+    script(src="js/popper.min.js")
+    script(src="js/bootstrap.min.js")
+    script(src="js/animation-count.js")
+    script(src="js/animationCounter.js")
+    script(src="js/script.js")

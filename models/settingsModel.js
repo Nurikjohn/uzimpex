@@ -4,7 +4,7 @@ const slugify = require('slugify');
 const settingsSchema = new mongoose.Schema({
     title: {
         type: String,
-        required: [true, 'Tashkilot nomi kiritilishi zarur.']
+        required: [true, 'Title is required']
     },
     description: {
         type: String,
@@ -22,6 +22,10 @@ const settingsSchema = new mongoose.Schema({
     references: String,
     contact: String,
     image: String,
+    lang: {
+        type: String,
+        required: [true, "Language is required"]
+    },
     createdAt: {
         type: Date,
         default: Date.now()
