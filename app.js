@@ -12,8 +12,15 @@ const viewsRouter = require('./routes/viewsRoutes');
 const userRouter = require('./routes/userRoutes');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
+const i18n = require("i18n");
 
 const app = express();
+
+i18n.configure({
+    locales: ['en', 'ru', 'uz'],
+    directory: __dirname + '/public/locales',
+    defaultLocale: 'ru'
+});
 
 //MIDDLEWARES
 app.use(morgan('dev'));
@@ -21,8 +28,9 @@ app.use(morgan('dev'));
 app.use(cookieParser());
 app.use(express.json());
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(i18n.init);
 
 
 // view engine setup
@@ -40,7 +48,7 @@ app.use('/api/comments', commentRouter);
 app.use('/users', userRouter);
 
 app.all('*', (req, res, next) => {
-  next(new AppError(`Not found!`, 404));
+    next(new AppError(`Not found!`, 404));
 });
 
 app.use(globalErrorHandler);

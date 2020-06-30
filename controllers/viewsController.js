@@ -7,9 +7,14 @@ const catchAsync = require("../utils/catchAsync");
 const AppError = require("../utils/appError");
 const jwt = require("jsonwebtoken");
 const {promisify} = require("util");
+const fs = require('fs');
+const i18n = require("i18n");
+
 
 exports.index = catchAsync(async (req, res, next) => {
-    const lang = req.params.lang || "ru";
+    let lang = req.params.lang || "ru";
+
+    lang = lang === "favicon.ico" ? "ru" : lang;
 
     const settings = await Setting.findOne({lang});
 
@@ -19,10 +24,13 @@ exports.index = catchAsync(async (req, res, next) => {
         products = products.slice(Math.max(products.length - 4, 0));
     }
 
+    i18n.setLocale(req, lang);
+
     res.status(200).render("index", {
         settings,
         products,
-        lang
+        lang,
+        res
     });
 });
 

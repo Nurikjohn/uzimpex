@@ -6,6 +6,7 @@ html(lang="en")
         link(rel="stylesheet" href="css/index.css")
         meta(http-equiv="X-UA-Compatible" content="IE=edge")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="shortcut icon" href="/images/favicon.png")
         link(rel="stylesheet" href="css/bootstrap.min.css")
         link(href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet")
         .section1(id="navbar")
@@ -24,19 +25,19 @@ html(lang="en")
                                     span
                                         img(src="SVG/Icon%20weather-time-9.svg" alt="")
                                     dl
-                                        dt Рабочее время
-                                        dd Пон-Суб: 9-20
+                                        dt= res.__('workingHours')
+                                        dd= res.__('hours')
                                 .col-lg-4.ab(style="padding-right: 0; padding-left: 0")
                                     span
                                         img(src="SVG/Icon%20awesome-location-arrow.svg" alt="")
                                     dl
-                                        dt Расположение
+                                        dt= res.__('location')
                                         dd= settings.adress
                                 .col-lg-3.ab
                                     span
                                         img(src="SVG/Icon%20awesome-phone-alt.svg" alt="")
                                     dl
-                                        dt Колл-центр
+                                        dt= res.__('phone')
                                         dd= settings.phone
 
                         hr
@@ -46,16 +47,15 @@ html(lang="en")
                                     #navbarTogglerDemo03.collapse.navbar-collapse
                                         ul.navbar-nav.mr-auto.mt-2.mt-lg-0
                                             li.nav-item.mx-lg-2
-                                                a.a.nav-link(href="#") ГЛАВНАЯ
+                                                a.a.nav-link(href="#")= res.__('main')
                                             li.nav-item.mx-lg-6
-                                                a.a.nav-link(style="margin: 0;padding-left: 0" href="#vid")
-                                                    | ВИДЫ ДЕЯТЕЛЬНОСТИ
+                                                a.a.nav-link(style="margin: 0;padding-left: 0" href="#vid")= res.__('activities')
                                             li.nav-item.mx-lg-2
-                                                a.a.nav-link(href="#uslugi") УСЛУГИ
+                                                a.a.nav-link(href="#uslugi")= res.__('services')
                                             li.nav-item.mx-lg-2
-                                                a.a.nav-link(href="#productsiya") ПРОДУКЦИЯ
+                                                a.a.nav-link(href="#productsiya")= res.__('products')
                                             li.nav-item.mx-lg-2
-                                                a.a.nav-link(href="#kontakti") КОНТАКТЫ
+                                                a.a.nav-link(href="#kontakti")= res.__('contacts')
                                             li.nav-item.mx-lg-2
                                                 .form-group.p-1
                                                     select#lang-select.form-control.form-control-sm.bg-transparent.text-white
@@ -74,10 +74,7 @@ html(lang="en")
                     br
                     br
                     br
-                    h1.text-break
-                        | ЭКСПОРТ И ИМПОРТ
-                        br
-                        |  СЕЛЬСКОХЗЯЙСТВЕННОЙ ПРОДУКЦИИ
+                    h1.text-break= res.__('hero-text')
                     p.text-break= settings.description
                     br
                     br
@@ -85,106 +82,82 @@ html(lang="en")
                         .col-lg-4
                             button.w-100.btn
                                 img(src="SVG/Icon%20ionic-ios-mail.svg" alt="")
-                                b Отправить запрос
+                                b= res.__('send-email')
                         .col-lg-4
                             button.w-100.btn
                                 img(src="SVG/Icon%20ionic-md-chatboxes.svg" alt="")
-                                b Задать вопрос
+                                b= res.__('send-question')
                         .col-lg-4
                             button.w-100.btn
                                 img(src="SVG/Icon%20awesome-phone-alt.svg" alt="")
-                                b Обратный звонок
+                                b= res.__('send-call')
                     br
                     br
         .section2
             .container
                 .row.my-lg-5
                     .col-lg-6
-                        h1.text-break.pt-4.heading
-                            | ДОБРО&nbsp;
-                            span(style="background-color: #484848; color: whitesmoke") ПОЖАЛОВАТЬ
+                        h1.text-break.pt-4.heading= res.__('wellcome-heading-1')
+                            span(style="background-color: #484848; color: whitesmoke")= res.__('wellcome-heading-2')
                         .badge.badge-dark .
-                        p(style="color: grey")
-                            | Все наши услуги и инвестиции направлены на предложение лучших решений
+                        p(style="color: grey")= res.__('wellcome-description')
                         p= settings.aboutUS
                         .row
                             .col-lg-9
                                 h5
                                     b Xurshid Istamov
-                                p Директор компании...
+                                p= res.__('director-label')
                             .col-lg-3
                                 img(src="" alt="")
                     .col-lg-6
                         img.img-fluid(src="images/transportation-logistics_37416-135.png" alt="")
         .section3(id="vid")
             .container.py-lg-5
-                h2.pt-4.heading
-                    | ВИДЫ&nbsp;
-                    span(style="background-color: #484848; color: whitesmoke") ДЕЯТЕЛЬНОСТИ
+                h2.pt-4.heading= res.__('activities-heading-1')
+                    span(style="background-color: #484848; color: whitesmoke")= res.__('activities-heading-2')
                 .badge.badge-dark .
-                p(style="color: grey") Lorem ipsum dolor sit amet, consectetur adipisicing elit
+                p(style="color: grey")= res.__('activities-description')
                 .row
                     .col-lg-3
                         .card
                             .card-body
                                 img.card-img-top.w-100(src="images/Пересечение%204.png" alt="")
-                                h5.mt-lg-2
-                                    | ЭКСПОРТ
-                                    br
-                                    |  ТОВАРОВ
+                                h5.mt-lg-2= res.__('activities-card-1-title')
                                 .badge .
-                                p
-                                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci asperiores consequatur
-                                    | corporis dolorem fugiat similique.
-                                button.btn.btn-outline-dark Подробнее
+                                p= res.__('activities-card-1-text')
+                                button.btn.btn-outline-dark= res.__('more')
                     .col-lg-3
                         .card
                             .card-body
-                                img.card-img-top.w-100(src="images/Пересечение%206.png" alt="")
-                                h5.mt-lg-2
-                                    | ИМПОРТ
-                                    br
-                                    |  ТОВАРОВ
+                                img.card-img-top.w-100(src="images/Пересечение%204.png" alt="")
+                                h5.mt-lg-2= res.__('activities-card-2-title')
                                 .badge .
-                                p
-                                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci asperiores consequatur
-                                    | corporis dolorem fugiat similique.
-                                button.btn.btn-outline-dark Подробнее
+                                p= res.__('activities-card-2-text')
+                                button.btn.btn-outline-dark= res.__('more')
                     .col-lg-3
                         .card
                             .card-body
-                                img.card-img-top.w-100(src="images/Пересечение%207.png" alt="")
-                                h5.mt-lg-2
-                                    | МЕЖДУНАРОДНЫЕ
-                                    br
-                                    |  ПЕРЕВОЗКИ
+                                img.card-img-top.w-100(src="images/Пересечение%204.png" alt="")
+                                h5.mt-lg-2= res.__('activities-card-3-title')
                                 .badge .
-                                p
-                                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci asperiores consequatur
-                                    | corporis dolorem fugiat similique.
-                                button.btn.btn-outline-dark Подробнее
+                                p= res.__('activities-card-3-text')
+                                button.btn.btn-outline-dark= res.__('more')
                     .col-lg-3
                         .card
                             .card-body
-                                img.card-img-top.w-100(src="images/Пересечение%208.png" alt="")
-                                h5.mt-lg-2
-                                    | УСЛУГИ
-                                    br
-                                    |  В СФЕРЕ ВЭД
+                                img.card-img-top.w-100(src="images/Пересечение%204.png" alt="")
+                                h5.mt-lg-2= res.__('activities-card-4-title')
                                 .badge .
-                                p
-                                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci asperiores consequatur
-                                    | corporis dolorem fugiat similique.
-                                button.btn.btn-outline-dark Подробнее
+                                p= res.__('activities-card-4-text')
+                                button.btn.btn-outline-dark= res.__('more')
         .section4
             .container
                 .row.my-lg-5
                     .col-lg-6
                         img.img-fluid(src="SVG/Сгруппировать%2023.svg" alt="")
                     .col-lg-6
-                        h2.text-break.pt-4.heading
-                            | О КОМПАНИИ&nbsp;
-                            span(style="background-color:  #484848; color: whitesmoke") "UZIMPEX" LLC
+                        h2.text-break.pt-4.heading= res.__("about-heading-1")
+                            span(style="background-color:  #484848; color: whitesmoke")= res.__("about-heading-2")
                         .badge.badge-dark .
                         p(style="color: grey")= settings.aboutUS
         .section5
@@ -193,17 +166,11 @@ html(lang="en")
                 br
                 .row
                     .col-lg-6
-                        h1.pt-4.heading
-                            | НАША
-                            span(style="background-color:  #484848; color: whitesmoke") ЦЕЛЬ
-                        p(style="font-size: 20px")
-                            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque dicta
-                            | distinctio earum facere fugiat
-                            | illum in ipsa odio praesentium quo similique, tenetur voluptate voluptatem. A aperiam blanditiis
-                            | consequatur culpa enim ex fugiat ipsa itaque magnam, maiores natus nihil nobis odit placeat porro
-                            | quis quod repellat sed sint unde ut vero?
+                        h1.pt-4.heading= res.__("target-heading-1")
+                            span(style="background-color:  #484848; color: whitesmoke")= res.__("target-heading-2")
+                        p(style="font-size: 20px")= res.__("target-description")
                         br
-                        button.btn.btn-outline-dark Подробнее
+                        button.btn.btn-outline-dark= res.__("more")
                         br
                         br
         .section6(id="productsiya")
