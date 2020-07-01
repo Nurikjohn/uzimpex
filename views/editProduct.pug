@@ -1,67 +1,155 @@
 doctype html
 html(lang="en")
-  head
-    meta(charset="utf-8")
-    meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
-    title Edit Product
-    link(href="/../css/bootstrap.min.css" rel="stylesheet")
-    style.
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    // Custom styles for this template
-    link(href="/../css/bootstrap.min.css" rel="stylesheet")
-  body.bg-light
-    .container
-      .text-center
-        img.d-block.mx-auto.mb-4(src="../assets/brand/bootstrap-solid.svg" alt="" width="72" height="72")
-        h2 Edit product
-      form#editForm
-        .form-group
-          label(for="exampleFormControlInput1") Title
-          input#exampleFormControlInput1.form-control(type="text" placeholder="" name="title" value=product.title)
-        .form-group
-          label(for="exampleFormControlInput2") Keywords
-          input#exampleFormControlInput2.form-control(type="text" placeholder="" name="keywords" value=product.keywords)
-        .form-group
-          label(for="exampleFormControlInput4") Price
-          input#exampleFormControlInput4.form-control(type="number" placeholder="" name="price" value=product.price)
-        .form-group
-          label(for="exampleFormControlInput5") Amount
-          input#exampleFormControlInput5.form-control(type="number" placeholder="" name="amount" value=product.amount)
-        .form-group
-          label(for="exampleFormControlSelect1") Category
-          select(name="categoryId")#exampleFormControlSelect1.form-control
-            for cat in categories
-              if cat._id.toString() === product.categoryId.toString()
-                option(value=cat._id selected)= cat.title
-              else
-                option(value=cat._id)= cat.title
-        .form-group
-          label(for="exampleFormControlTextarea1") Description
-          textarea#exampleFormControlTextarea1.form-control(rows="3" name="description")= product.description
-        .form-group
-          label(for="exampleFormControlTextarea2") Details
-          textarea#exampleFormControlTextarea2.form-control(rows="3" name="details")= product.details
-        .custom-file.mb-3.mt-3
-          input#validatedCustomFile.custom-file-input(type="file" name="image")
-          label.custom-file-label(for="validatedCustomFile") Choose image...
-          .invalid-feedback Example invalid custom file feedback
-        .d-flex.justify-content-between
-          a.btn.btn-outline-secondary.float-right.cancel-btn(href=`/admin`) Cancel
-          button.btn.btn-primary.float-right.save-btn(data-url=`/api/products/${product._id}`) Submit form
-      footer.my-5.pt-5.text-muted.text-center.text-small
-        p.mb-1 © 2008-2020 UzImpex
-    script(src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous")
-    script(src="/../js/bootstrap.min.js")
-    script(src="/../js/script.js")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+        title Edit Product
+        link(href="/../css/bootstrap.min.css" rel="stylesheet")
+        style.
+            .bd-placeholder-img {
+                font-size: 1.125rem;
+                text-anchor: middle;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+
+            @media (min-width: 768px) {
+                .bd-placeholder-img-lg {
+                    font-size: 3.5rem;
+                }
+            }
+        // Custom styles for this template
+        link(href="/../css/bootstrap.min.css" rel="stylesheet")
+    body.bg-light
+        .container
+            .text-center
+                img.d-block.mx-auto.mb-4(src="../assets/brand/bootstrap-solid.svg" alt="" width="72" height="72")
+                h2 Edit product
+            form#editForm
+                .form-group
+                    label(for="exampleFormControlInput1-1") Title
+                    input#exampleFormControlInput1-1.form-control(type="text" placeholder="" name="titleRu" value=product.title[0])
+                .form-group
+                    label(for="exampleFormControlInput1-2") Title
+                    input#exampleFormControlInput1-2.form-control(type="text" placeholder="" name="titleUz" value=product.title[1])
+                .form-group
+                    label(for="exampleFormControlInput1-3") Title
+                    input#exampleFormControlInput1-3.form-control(type="text" placeholder="" name="titleEn" value=product.title[2])
+                .form-group
+                    label(for="exampleFormControlInput2") Keywords
+                    input#exampleFormControlInput2.form-control(type="text" placeholder="" name="keywords" value=product.keywords)
+                .form-group
+                    label(for="exampleFormControlInput4") Price
+                    input#exampleFormControlInput4.form-control(type="number" placeholder="" name="price" value=product.price)
+                .form-group
+                    label(for="exampleFormControlInput5") Amount
+                    input#exampleFormControlInput5.form-control(type="number" placeholder="" name="amount" value=product.amount)
+                .form-group
+                    label(for="exampleFormControlSelect1") Category
+                    select(name="categoryId")#exampleFormControlSelect1.form-control
+                        for cat in categories
+                            if cat._id.toString() === product.categoryId.toString()
+                                option(value=cat._id selected)= cat.title
+                            else
+                                option(value=cat._id)= cat.title
+                .form-group
+                    label(for="exampleFormControlSelect2") Sub Category
+                    select(name="subCategoryId")#exampleFormControlSelect2.form-control
+                        for subCat in subCategory
+                            if subCat._id.toString() === product.subCategoryId.toString()
+                                option(value=subCat._id)= subCat.title
+                            else
+                                option(value=subCat._id)= subCat.title
+                .form-group
+                    label(for="exampleFormControlTextarea1-1") Description - RU
+                    textarea#exampleFormControlTextarea1-1.form-control(rows="3" name="descriptionRu")= product.description[0]
+                .form-group
+                    label(for="exampleFormControlTextarea1-2") Description - UZ
+                    textarea#exampleFormControlTextarea1-2.form-control(rows="3" name="descriptionUz")= product.description[1]
+                .form-group
+                    label(for="exampleFormControlTextarea1-3") Description - EN
+                    textarea#exampleFormControlTextarea1-3.form-control(rows="3" name="descriptionEn")= product.description[2]
+                .form-group
+                    label(for="exampleFormControlTextarea2") Details
+                    textarea#exampleFormControlTextarea2.form-control(rows="3" name="details")= product.details
+                .custom-file.mb-3.mt-3
+                    input#validatedCustomFile.custom-file-input(type="file" name="image")
+                    label.custom-file-label(for="validatedCustomFile") Choose image...
+                    .invalid-feedback Example invalid custom file feedback
+                .d-flex.justify-content-between
+                    a.btn.btn-outline-secondary.float-right.cancel-btn(href=`/admin`) Cancel
+                    a.btn.btn-primary.float-right.save-btn(data-url=`/api/products/${product._id}`) Submit form
+            footer.my-5.pt-5.text-muted.text-center.text-small
+                p.mb-1 © 2008-2020 UzImpex
+        script(src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous")
+        script(src="/../js/bootstrap.min.js")
+        script.
+            $("#exampleFormControlSelect1").on("change", async (e) => {
+                const categoryId = $('#exampleFormControlSelect1').val();
+                const url = `/api/subcategories/category/${categoryId}`;
+                const res = await
+                $.ajax({
+                    url,
+                    type: "GET"
+                });
+
+                const {subCategories} = res.data
+                console.log(subCategories)
+                $('#exampleFormControlSelect2').empty();
+                for (let i in subCategories) {
+                    // console.log(subCategories[i])
+                    $('#exampleFormControlSelect2').append(`<option value=${subCategories[i]._id}> ${subCategories[i].title} </option>`)
+                }
+            });
+
+            $(".save-btn").click((e) => {
+                const url = $(e.target).attr("data-url");
+
+                var data = new FormData();
+
+                const image = $("#validatedCustomFile").prop("files")[0];
+                const titleRu = $("#exampleFormControlInput1-1").val();
+                const titleUz = $("#exampleFormControlInput1-2").val();
+                const titleEn = $("#exampleFormControlInput1-3").val();
+                const keywords = $("#exampleFormControlInput2").val();
+                const price = $("#exampleFormControlInput4").val();
+                const amount = $("#exampleFormControlInput5").val();
+                const category = $("#exampleFormControlSelect1").val();
+                const subCategory = $("#exampleFormControlSelect2").val();
+                const descriptionRu = $("#exampleFormControlTextarea1-1").val();
+                const descriptionUz = $("#exampleFormControlTextarea1-2").val();
+                const descriptionEn = $("#exampleFormControlTextarea1-3").val();
+                const details = $("#exampleFormControlTextarea2").val();
+
+                if (image) {
+                    data.append("image", image);
+                }
+
+                data.append("titleRu", titleRu);
+                data.append("titleUz", titleUz);
+                data.append("titleEn", titleEn);
+                data.append("keywords", keywords);
+                data.append("price", price);
+                data.append("amount", amount);
+                data.append("categoryId", category);
+                data.append("subCategoryId", subCategory);
+                data.append("descriptionRu", descriptionRu);
+                data.append("descriptionEn", descriptionEn);
+                data.append("descriptionUz", descriptionUz);
+                data.append("details", details);
+
+                console.log(data);
+
+                $.ajax({
+                    url,
+                    dataType: "text",
+                    data: data,
+                    processData: false,
+                    contentType: false,
+                    type: "PATCH",
+                });
+
+                window.location.href = "/admin";
+            });

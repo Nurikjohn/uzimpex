@@ -4,12 +4,12 @@ const slugify = require('slugify');
 
 const productSchema = new mongoose.Schema({
     title: {
-        type: String,
+        type: [String],
         required: [true, 'Maxsulot nomi kiritilishi zarur.']
     },
     slug: String,
     description: {
-        type: String,
+        type: [String],
         trim: true
     },
     keywords: String,
@@ -19,7 +19,7 @@ const productSchema = new mongoose.Schema({
     },
     categoryId: mongoose.Schema.ObjectId,
     subCategoryId: mongoose.Schema.ObjectId,
-    details: String,
+    details: [String],
     price: Number,
     amount: {
         type: Number,
@@ -40,7 +40,7 @@ const productSchema = new mongoose.Schema({
 
 // Doument middleware
 productSchema.pre('save', function (next) {
-    this.slug = slugify(this.title, {
+    this.slug = slugify(this.title[0], {
         lower: true
     });
 

@@ -4,7 +4,7 @@ const AppError = require("../utils/appError");
 
 
 exports.getAllSubCategories = catchAsync(async (req, res, next) => {
-    const subCategories = await SubCategory.find();
+    const subCategories = await SubCategory.find({categoryId: req.params.id});
 
     //SEND RESPONSE
     res.status(200).json({

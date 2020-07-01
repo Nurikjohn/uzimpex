@@ -38,8 +38,8 @@ html(lang="en")
                                     .card.my-2.mx-2(style="min-height: 100%")
                                         img.card-img-top(src=`/${product.image}` alt="...")
                                         .card-body
-                                            h5.card-title= product.title
-                                            p.card-text= product.description
+                                            h5.card-title= product.title[0]
+                                            p.card-text= product.description[0]
                                         .card-footer.d-flex.justify-content-between
                                             button.btn.btn-outline-danger.delete-prod(data-url=`/api/products/${product._id}`) Delete
                                             a.btn.btn-success(href=`/admin/product/edit-product/${product._id}`) Edit

@@ -5,7 +5,7 @@ const subCategoryController = require('./../controllers/subCategoryController');
 const router = express.Router();
 
 router
-    .route('/')
+    .route('/category/:id')
     .get(subCategoryController.getAllSubCategories)
     .post(subCategoryController.createSubCategory);
 

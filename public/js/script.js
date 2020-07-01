@@ -16,46 +16,6 @@ $(".delete-prod").click((e) => {
   });
 });
 
-$(".save-btn").click((e) => {
-  const url = $(e.target).attr("data-url");
-
-  var data = new FormData();
-
-  const image = $("#validatedCustomFile").prop("files")[0];
-  const title = $("#exampleFormControlInput1").val();
-  const keywords = $("#exampleFormControlInput2").val();
-  const price = $("#exampleFormControlInput4").val();
-  const amount = $("#exampleFormControlInput5").val();
-  const category = $("#exampleFormControlSelect1").val();
-  const description = $("#exampleFormControlTextarea1").val();
-  const details = $("#exampleFormControlTextarea2").val();
-
-  if (image) {
-    data.append("image", image);
-  }
-
-  data.append("title", title);
-  data.append("keywords", keywords);
-  data.append("price", price);
-  data.append("amount", amount);
-  data.append("categoryId", category);
-  data.append("description", description);
-  data.append("details", details);
-
-  console.log(data);
-
-  $.ajax({
-    url,
-    dataType: "text",
-    data: data,
-    processData: false,
-    contentType: false,
-    type: "PATCH",
-  });
-
-  window.location.href = "/admin";
-});
-
 $('#interest_tabs').on('click', 'a[data-toggle="tab"]', function(e) {
   e.preventDefault();
 
@@ -100,4 +60,8 @@ $('#lang-select').on("change", e => {
   const lang = $(e.target).val();
 
   window.location.href = `${window.location.origin}/${lang}`
+});
+
+$('#button-submit').click(() => {
+  window.location.href = "/admin"
 });

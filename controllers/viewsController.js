@@ -24,13 +24,22 @@ exports.index = catchAsync(async (req, res, next) => {
         products = products.slice(Math.max(products.length - 4, 0));
     }
 
+    let langIndex;
+
+    switch (lang) {
+        case 'ru': langIndex = 0; break;
+        case 'uz': langIndex = 1; break;
+        case 'en': langIndex = 2; break;
+    }
+
     i18n.setLocale(req, lang);
 
     res.status(200).render("index", {
         settings,
         products,
         lang,
-        res
+        res,
+        langIndex
     });
 });
 
@@ -61,6 +70,7 @@ exports.adminPanel = catchAsync(async (req, res, next) => {
 
 exports.category = catchAsync(async (req, res, next) => {
     let token;
+
     if (req.cookies && req.cookies._token) {
         token = req.cookies._token;
     }
@@ -125,7 +135,9 @@ exports.addProduct = catchAsync(async (req, res, next) => {
 
     const categories = await Category.find();
 
-    res.status(200).render("addProduct", {categories});
+    const subCategory = await SubCategory.find({categoryId: categories[0]._id});
+
+    res.status(200).render("addProduct", {categories, subCategory});
 });
 
 exports.editProduct = catchAsync(async (req, res, next) => {
@@ -152,5 +164,7 @@ exports.editProduct = catchAsync(async (req, res, next) => {
 
     const categories = await Category.find();
 
-    res.status(200).render("editProduct", {product, categories});
+    const subCategory = await SubCategory.find({categoryId: categories[0]._id});
+
+    res.status(200).render("editProduct", {product, categories, subCategory});
 });
