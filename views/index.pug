@@ -65,114 +65,101 @@ html(lang="en")
                                                             | RU
                                                         option.text-dark(value="en" selected=(lang === 'en'))
                                                             | EN
-
-            .container
-                .box
-                    br
-                    br
-                    br
-                    br
-                    br
-                    br
-                    h1.text-break= res.__('hero-text')
-                    p.text-break= settings.description
-                    br
-                    br
-                    .row.mt-5
-                        .col-lg-4
-                            button.w-100.btn
-                                img(src="SVG/Icon%20ionic-ios-mail.svg" alt="")
-                                b= res.__('send-email')
-                        .col-lg-4
-                            button.w-100.btn
-                                img(src="SVG/Icon%20ionic-md-chatboxes.svg" alt="")
-                                b= res.__('send-question')
-                        .col-lg-4
-                            button.w-100.btn
-                                img(src="SVG/Icon%20awesome-phone-alt.svg" alt="")
-                                b= res.__('send-call')
-                    br
-                    br
-        .section2
-            .container
-                .row.my-lg-5
-                    .col-lg-6
-                        h1.text-break.pt-4.heading= res.__('wellcome-heading-1')
-                            span(style="background-color: #484848; color: whitesmoke")= res.__('wellcome-heading-2')
-                        .badge.badge-dark
-                        p(style="color: grey")= res.__('wellcome-description')
-                        p= res.__('wellcome-description-2')
-                        .row
-                            .col-lg-9
-                                h5
-                                    b Xurshid Istamov
-                                p= res.__('director-label')
-                            .col-lg-3
-                                img(src="" alt="")
-                    .col-lg-6
-                        img.img-fluid(src="images/transportation-logistics_37416-135.png" alt="")
-        .section3(id="vid")
-            .container.py-lg-5
-                h2.pt-4.heading= res.__('activities-heading-1')
-                    span(style="background-color: #484848; color: whitesmoke")= res.__('activities-heading-2')
-                .badge.badge-dark .
-                p(style="color: grey")= res.__('activities-description')
-                .row
-                    .col-lg-3
-                        .card
-                            .card-body
-                                img.card-img-top.w-100(src="images/Пересечение%204.png" alt="")
-                                h5.mt-lg-2= res.__('activities-card-1-title')
-                                .badge .
-                                p= res.__('activities-card-1-text')
-                                button.btn.btn-outline-dark= res.__('more')
-                    .col-lg-3
-                        .card
-                            .card-body
-                                img.card-img-top.w-100(src="images/Пересечение%204.png" alt="")
-                                h5.mt-lg-2= res.__('activities-card-2-title')
-                                .badge .
-                                p= res.__('activities-card-2-text')
-                                button.btn.btn-outline-dark= res.__('more')
-                    .col-lg-3
-                        .card
-                            .card-body
-                                img.card-img-top.w-100(src="images/Пересечение%204.png" alt="")
-                                h5.mt-lg-2= res.__('activities-card-3-title')
-                                .badge .
-                                p= res.__('activities-card-3-text')
-                                button.btn.btn-outline-dark= res.__('more')
-                    .col-lg-3
-                        .card
-                            .card-body
-                                img.card-img-top.w-100(src="images/Пересечение%204.png" alt="")
-                                h5.mt-lg-2= res.__('activities-card-4-title')
-                                .badge .
-                                p= res.__('activities-card-4-text')
-                                button.btn.btn-outline-dark= res.__('more')
-        .section4
-            .container
-                .row.my-lg-5
-                    .col-lg-6
-                        img.img-fluid(src="SVG/Сгруппировать%2023.svg" alt="")
-                    .col-lg-6
-                        h2.text-break.pt-4.heading= res.__("about-heading-1")
-                            span(style="background-color:  #484848; color: whitesmoke")= res.__("about-heading-2")
-                        .badge.badge-dark .
-                        p(style="color: grey")= settings.aboutUS
-        .section5
-            .container.py-lg-5
-                br
-                br
-                .row
-                    .col-lg-6
-                        h1.pt-4.heading= res.__("target-heading-1")
-                            span(style="background-color:  #484848; color: whitesmoke")= res.__("target-heading-2")
-                        p(style="font-size: 20px")= res.__("target-description")
-                        br
-                        button.btn.btn-outline-dark= res.__("more")
-                        br
-                        br
+            //
+            //.container
+            //    .box
+            //        br
+            //        br
+            //        br
+            //        br
+            //        br
+            //        br
+            //        h1.text-break= res.__('hero-text')
+            //        p.text-break= settings.description
+            //        br
+            //        br
+            //        .row.mt-5
+            //            .col-lg-4
+            //                button.w-100.btn
+            //                    img(src="SVG/Icon%20ionic-ios-mail.svg" alt="")
+            //                    b= res.__('send-email')
+            //            .col-lg-4
+            //                button.w-100.btn
+            //                    img(src="SVG/Icon%20ionic-md-chatboxes.svg" alt="")
+            //                    b= res.__('send-question')
+            //            .col-lg-4
+            //                button.w-100.btn
+            //                    img(src="SVG/Icon%20awesome-phone-alt.svg" alt="")
+            //                    b= res.__('send-call')
+            //        br
+            //        br
+        //.section2
+        //    .container
+        //        .row.my-lg-5
+        //            .col-lg-6
+        //                h1.text-break.pt-4.heading= res.__('wellcome-heading-1')
+        //                    span(style="background-color: #484848; color: whitesmoke")= res.__('wellcome-heading-2')
+        //                .badge.badge-dark
+        //                p(style="color: grey")= res.__('wellcome-description')
+        //                p= res.__('wellcome-description-2')
+        //                .row
+        //                    .col-lg-9
+        //                        h5
+        //                            b Xurshid Istamov
+        //                        p= res.__('director-label')
+        //                    .col-lg-3
+        //                        img(src="" alt="")
+        //            .col-lg-6
+        //                img.img-fluid(src="images/transportation-logistics_37416-135.png" alt="")
+        //.section3(id="vid")
+        //    .container.py-lg-5
+        //        h2.pt-4.heading= res.__('activities-heading-1')
+        //            span(style="background-color: #484848; color: whitesmoke")= res.__('activities-heading-2')
+        //        .badge.badge-dark .
+        //        p(style="color: grey")= res.__('activities-description')
+        //        .row
+        //            .col-lg-3
+        //                .card
+        //                    .card-body
+        //                        img.card-img-top.w-100(src="images/Пересечение%204.png" alt="")
+        //                        h5.mt-lg-2= res.__('activities-card-1-title')
+        //                        .badge .
+        //                        p= res.__('activities-card-1-text')
+        //                        button.btn.btn-outline-dark= res.__('more')
+        //            .col-lg-3
+        //                .card
+        //                    .card-body
+        //                        img.card-img-top.w-100(src="images/Пересечение%204.png" alt="")
+        //                        h5.mt-lg-2= res.__('activities-card-2-title')
+        //                        .badge .
+        //                        p= res.__('activities-card-2-text')
+        //                        button.btn.btn-outline-dark= res.__('more')
+        //            .col-lg-3
+        //                .card
+        //                    .card-body
+        //                        img.card-img-top.w-100(src="images/Пересечение%204.png" alt="")
+        //                        h5.mt-lg-2= res.__('activities-card-3-title')
+        //                        .badge .
+        //                        p= res.__('activities-card-3-text')
+        //                        button.btn.btn-outline-dark= res.__('more')
+        //            .col-lg-3
+        //                .card
+        //                    .card-body
+        //                        img.card-img-top.w-100(src="images/Пересечение%204.png" alt="")
+        //                        h5.mt-lg-2= res.__('activities-card-4-title')
+        //                        .badge .
+        //                        p= res.__('activities-card-4-text')
+        //                        button.btn.btn-outline-dark= res.__('more')
+        //.section4
+        //    .container
+        //        .row.my-lg-5
+        //            .col-lg-6
+        //                img.img-fluid(src="SVG/Сгруппировать%2023.svg" alt="")
+        //            .col-lg-6
+        //                h2.text-break.pt-4.heading= res.__("about-heading-1")
+        //                    span(style="background-color:  #484848; color: whitesmoke")= res.__("about-heading-2")
+        //                .badge.badge-dark .
+        //                p(style="color: grey")= settings.aboutUS
         .section6(id="productsiya")
             .container.py-lg-5.pb-0
                 .head
@@ -190,372 +177,386 @@ html(lang="en")
                                     p.text-truncate.card-text= product.description[langIndex]
                                     button.btn.btn-outline-dark.product-more= res.__('more')
 
-        .section7
-            .container
-                h1.pt-4.heading= res.__("results-heading-1")
-                    span(style="background-color: #484848; color: whitesmoke")= res.__("results-heading-2")
+        .section5
+            .container.py-lg-5
                 br
                 br
-                .row
-                    .col-lg-4
-                        h2
-                            span.count-first 2500
-                            | +
-                        p.p1
-                            | -
-                            img(src="SVG/contract.svg" alt="")
-                            |  -
-                        p.p2= res.__("results-item-1")
-                    .col-lg-4
-                        h2
-                            span.count-second 30
-                            | +
-                        p.p1
-                            | -
-                            img(src="SVG/location.svg" alt="")
-                            |  -
-                        p.p2= res.__("results-item-2")
-                    .col-lg-4
-                        h2
-                            span.count-third 12.0
-                            span(style="font-size: 30px") млн $
-                        p.p1
-                            | -
-                            img(src="SVG/money.svg" alt="")
-                            |  -
-                        p.p2= res.__("results-item-3")
-                br
-                br
-        .section8(id="uslugi")
-            .container
-                .div
-                    h2.pt-4.heading= res.__("services-heading-1")
-                        span(style="background-color: #484848; color: whitesmoke")= res.__("services-heading-2")
-                    .badge.badge-dark .
-                    p(style="color: grey")= res.__("services-description")
-                .row
-                    .col-lg-3.mt-4
-                        .box
-                            img(src="images/okno_5_1.png" alt="")
-                            h2= res.__("services-city-1")
-                            button.btn.btn-outline-dark= res.__("more")
-                    .col-lg-3.mt-4
-                        .box
-                            img(src="images/okno_5_2.png" alt="")
-                            h2= res.__("services-city-2")
-                            button.btn.btn-outline-dark= res.__("more")
-                    .col-lg-3.mt-4
-                        .box
-                            img(src="images/okno_5_3.png" alt="")
-                            h2= res.__("services-city-3")
-                            button.btn.btn-outline-dark= res.__("more")
-                    .col-lg-3.mt-4
-                        .box
-                            img(src="images/okno_5_4.png" alt="")
-                            h2= res.__("services-city-4")
-                            button.btn.btn-outline-dark= res.__("more")
-                    .col-lg-3.mt-4
-                        .box
-                            img(src="images/okno_5_6.png" alt="")
-                            h2= res.__("services-city-5")
-                            button.btn.btn-outline-dark= res.__("more")
-                    .col-lg-3.mt-4
-                        .box
-                            img(src="images/okno_5_7.png" alt="")
-                            h2= res.__("services-city-6")
-                            button.btn.btn-outline-dark= res.__("more")
-                    .col-lg-3.mt-4
-                        .box
-                            img(src="images/okno_5_8.png" alt="")
-                            h2= res.__("services-city-7")
-                            button.btn.btn-outline-dark= res.__("more")
-                    .col-lg-3.mt-4
-                        .box
-                            img(src="images/okno_5_9.png" alt="")
-                            h2= res.__("services-city-8")
-                            button.btn.btn-outline-dark= res.__("more")
-                br
-                br
-                .row
-                    .col-lg-3.offset-lg-3
-                        .input-group.mb-3
-                            .input-group-prepend
-                                span.input-group-text.btn-dark.bg-dark
-                                    img(src="SVG/Icon%20material-language.svg" alt="")
-                            input.form-control(type="text" placeholder="Все страны")
-                    .col-lg-3
-                        .input-group.mb-3
-                            input.form-control(type="search" placeholder="Поиск страны")
-                            .input-group-append
-                                span.input-group-text.btn-dark.bg-dark
-                                    img(src="SVG/Icon%20feather-search.svg" alt="")
-                br
-                br
-        .section9
-            .container
-                .row
-                    .col-lg-7
-                        h2.text-break.pt-4.heading= res.__("calcprice-heading-1")
-                            span(style="background-color: #484848; color: whitesmoke")= res.__("calcprice-heading-2")
-                        br
-                        p(style="font-size: 20px")= res.__("calcprice-description")
-                        br
-                    .col-lg-3.offset-lg-2.pt-lg-5.mb-4
-                        .input-group
-                            .input-group-prepend
-                                span.input-group-text.btn-warning.bg-warning
-                                    img(src="SVG/calculator%20·%20finance%20·%20business%20·%20calculation%20·%20money.svg" alt="")
-                            input.form-control(type="text" placeholder="Отправить Запрос")
-        .section10
-            .container
-                .div
-                    br
-                    h2.pt-4.heading= res.__("fea-heading-1")
-                        span(style="background-color: #484848; color: whitesmoke")= res.__("fea-heading-2")
-                    .badge.badge-dark .
-                    p(style="color: grey")= res.__("fea-description")
-                    br
-                .row
-                    .col-lg-3
-                        .box
-                            img(src="SVG/work.svg" alt="")
-                            h4.mt-lg-2= res.__("fea-item-1-title")
-                            .badge .
-                            p= res.__("fea-item-1")
-                    .col-lg-3
-                        .box
-                            img(src="SVG/businessman.svg" alt="")
-                            h4.mt-lg-2= res.__("fea-item-2-title")
-                            .badge .
-                            p= res.__("fea-item-2")
-                    .col-lg-3
-                        .box
-                            img(src="SVG/certificate.svg" alt="")
-                            h4.mt-lg-2= res.__("fea-item-3-title")
-                            .badge .
-                            p= res.__("fea-item-3")
-                    .col-lg-3
-                        .box
-                            img(style="width: 64px" src="SVG/contract.svg" alt="")
-                            h4.mt-lg-2= res.__("fea-item-4-title")
-                            .badge .
-                            p= res.__("fea-item-4")
-                br
-        .section11
-            .container
                 .row
                     .col-lg-6
-                        .box
-                            br
-                            br
-                            br
-                            h2.text-break.pt-4.heading= res.__("info-heading-1")
-                                span(style="background-color: #484848; color: whitesmoke")= res.__("info-heading-2")
-                            .badge.badge-dark .
-                            br
-                            .list
-                                p
-                                    i.bx.bx-right-arrow-circle.mr-3
-                                    = res.__("info-item-1")
-                                p
-                                    i.bx.bx-right-arrow-circle.mr-3
-                                    = res.__("info-item-2")
-                                p
-                                    i.bx.bx-right-arrow-circle.mr-3
-                                    = res.__("info-item-3")
-                                p
-                                    i.bx.bx-right-arrow-circle.mr-3
-                                    = res.__("info-item-4")
-                                p
-                                    i.bx.bx-right-arrow-circle.mr-3
-                                    = res.__("info-item-5")
-                                p
-                                    i.bx.bx-right-arrow-circle.mr-3
-                                    = res.__("info-item-6")
-                                p
-                                    i.bx.bx-right-arrow-circle.mr-3
-                                    = res.__("info-item-7")
-                                p
-                                    i.bx.bx-right-arrow-circle.mr-3
-                                    = res.__("info-item-8")
-        .section12
-            .container.pt-lg-5
-                h2.pt-4.heading= res.__("cities-heading-1")
-                    span(style="background-color: #484848; color: whitesmoke")= res.__("cities-heading-2")
-                br
-                .row
-                    .col-lg-1
-                        img(src="SVG/united-states.svg" alt="")
-                        p= res.__("cities-item-1")
-                    .col-lg-1.offset-lg-1
-                        img(src="SVG/germany.svg" alt="")
-                        p= res.__("cities-item-2")
-                    .col-lg-1.offset-lg-1
-                        img(src="SVG/russia.svg" alt="")
-                        p= res.__("cities-item-3")
-                    .col-lg-1.offset-lg-1
-                        img(src="SVG/china.svg" alt="")
-                        p= res.__("cities-item-4")
-                    .col-lg-1.offset-lg-1
-                        img(src="SVG/turkey.svg" alt="")
-                        p= res.__("cities-item-5")
-                    .col-lg-1.offset-lg-1
-                        img(src="SVG/uzbekistan.svg" alt="")
-                        p= res.__("cities-item-6")
-                br
-                .row
-                    .col-lg-3.offset-lg-4
-                        .input-group
-                            .input-group-prepend
-                                span.input-group-text.btn-dark.bg-dark
-                                    img(src="SVG/Icon%20material-language.svg" alt="")
-                            input.form-control(type="text" placeholder="Все страны")
-        //.section13
-        //    .container-fluid.pt-lg-5
-        //        .div
-        //            h2.pt-4.heading
-        //                span(style="background-color: #484848; color: whitesmoke") НОВОСТИ
+                        h1.pt-4.heading= res.__("target-heading-1")
+                        span(style="background-color:  #484848; color: whitesmoke")= res.__("target-heading-2")
+                        p(style="font-size: 20px")= res.__("target-description")
+                        br
+                        button.btn.btn-outline-dark= res.__("more")
+                        br
+                        br
+
+        //.section7
+        //    .container
+        //        h1.pt-4.heading= res.__("results-heading-1")
+        //            span(style="background-color: #484848; color: whitesmoke")= res.__("results-heading-2")
         //        br
-        //
-        //        #demo.carousel.slide(data-ride="carousel")
-        //            // Indicators
-        //            // The slideshow
-        //            .p-3.carousel-inner
-        //                .carousel-item.active
-        //                    .container
-        //                        .row
-        //                            .col-lg-4
-        //                                .box.mb-3
-        //                                    img(src="images/okno_5_1.png" alt="")
-        //                                    h5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, quis!
-        //                                    i.bx.bx-calendar-event
-        //                                    span.ml-1 2020-06-21
-        //                                    i.bx.bxs-show.ml-3
-        //                                    span.ml-1 547
-        //                                    p
-        //                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores delectus
-        //                                        | numquam quisquam,
-        //                                        | saepe unde vero?
-        //                                    button.btn.btn-outline-dark Подробнее
-        //                            .col-lg-4
-        //                                .box.mb-3
-        //                                    img(src="images/okno_5_2.png" alt="")
-        //                                    h5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, quis!
-        //                                    i.bx.bx-calendar-event
-        //                                    span.ml-1 2020-06-21
-        //                                    i.bx.bxs-show.ml-3
-        //                                    span.ml-1 547
-        //                                    p
-        //                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores delectus
-        //                                        | numquam quisquam,
-        //                                        | saepe unde vero?
-        //                                    button.btn.btn-outline-dark Подробнее
-        //                            .col-lg-4
-        //                                .box.mb-3
-        //                                    img(src="images/okno_5_3.png" alt="")
-        //                                    h5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, quis!
-        //                                    i.bx.bx-calendar-event
-        //                                    span.ml-1 2020-06-21
-        //                                    i.bx.bxs-show.ml-3
-        //                                    span.ml-1 547
-        //                                    p
-        //                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores delectus
-        //                                        | numquam quisquam,
-        //                                        | saepe unde vero?
-        //                                    button.btn.btn-outline-dark Подробнее
-        //                .carousel-item
-        //                    .container
-        //                        .row
-        //                            .col-lg-4
-        //                                .box.mb-3
-        //                                    img(src="images/okno_5_1.png" alt="")
-        //                                    h5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, quis!
-        //                                    i.bx.bx-calendar-event
-        //                                    span.ml-1 2020-06-21
-        //                                    i.bx.bxs-show.ml-3
-        //                                    span.ml-1 547
-        //                                    p
-        //                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores delectus
-        //                                        | numquam quisquam,
-        //                                        | saepe unde vero?
-        //                                    button.btn.btn-outline-dark Подробнее
-        //                            .col-lg-4
-        //                                .box.mb-3
-        //                                    img(src="images/okno_5_2.png" alt="")
-        //                                    h5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, quis!
-        //                                    i.bx.bx-calendar-event
-        //                                    span.ml-1 2020-06-21
-        //                                    i.bx.bxs-show.ml-3
-        //                                    span.ml-1 547
-        //                                    p
-        //                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores delectus
-        //                                        | numquam quisquam,
-        //                                        | saepe unde vero?
-        //                                    button.btn.btn-outline-dark Подробнее
-        //                            .col-lg-4
-        //                                .box.mb-3
-        //                                    img(src="images/okno_5_3.png" alt="")
-        //                                    h5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, quis!
-        //                                    i.bx.bx-calendar-event
-        //                                    span.ml-1 2020-06-21
-        //                                    i.bx.bxs-show.ml-3
-        //                                    span.ml-1 547
-        //                                    p
-        //                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores delectus
-        //                                        | numquam quisquam,
-        //                                        | saepe unde vero?
-        //                                    button.btn.btn-outline-dark Подробнее
-        //                .carousel-item
-        //                    .container
-        //                        .row
-        //                            .col-lg-4
-        //                                .box.mb-3
-        //                                    img(src="images/okno_5_1.png" alt="")
-        //                                    h5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, quis!
-        //                                    span
-        //                                        i.bx.bx-calendar-event 2020-06-21
-        //                                    span
-        //                                        i.bx.bxs-show 547
-        //                                    p
-        //                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores delectus
-        //                                        | numquam quisquam,
-        //                                        | saepe unde vero?
-        //                                    button.btn.btn-outline-dark Подробнее
-        //                            .col-lg-4
-        //                                .box.mb-3
-        //                                    img(src="images/okno_5_2.png" alt="")
-        //                                    h5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, quis!
-        //                                    i.bx.bx-calendar-event
-        //                                    span.ml-1 2020-06-21
-        //                                    i.bx.bxs-show.ml-3
-        //                                    span.ml-1 547
-        //                                    p
-        //                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores delectus
-        //                                        | numquam quisquam,
-        //                                        | saepe unde vero?
-        //                                    button.btn.btn-outline-dark Подробнее
-        //                            .col-lg-4
-        //                                .box.mb-3
-        //                                    img(src="images/okno_5_3.png" alt="")
-        //                                    h5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, quis!
-        //                                    i.bx.bx-calendar-event
-        //                                    span.ml-1 2020-06-21
-        //                                    i.bx.bxs-show.ml-3
-        //                                    span.ml-1 547
-        //                                    p
-        //                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores delectus
-        //                                        | numquam quisquam,
-        //                                        | saepe unde vero?
-        //                                    button.btn.btn-outline-dark Подробнее
-        //            ul.carousel-indicators.mt-5.invisible
-        //                li.active(data-target="#demo" data-slide-to="0")
-        //                li(data-target="#demo" data-slide-to="1")
-        //                li(data-target="#demo" data-slide-to="2")
-        //            // Left and right controls
-        //            a.carousel-control-prev(href="#demo" data-slide="prev")
-        //                i.bx.bx-chevron-left.icon-48.text-dark
-        //            a.carousel-control-next(href="#demo" data-slide="next")
-        //                i.bx.bx-chevron-right.icon-48.text-dark
+        //        br
+        //        .row
+        //            .col-lg-4
+        //                h2
+        //                    span.count-first 2500
+        //                    | +
+        //                p.p1
+        //                    | -
+        //                    img(src="SVG/contract.svg" alt="")
+        //                    |  -
+        //                p.p2= res.__("results-item-1")
+        //            .col-lg-4
+        //                h2
+        //                    span.count-second 30
+        //                    | +
+        //                p.p1
+        //                    | -
+        //                    img(src="SVG/location.svg" alt="")
+        //                    |  -
+        //                p.p2= res.__("results-item-2")
+        //            .col-lg-4
+        //                h2
+        //                    span.count-third 12.0
+        //                    span(style="font-size: 30px") млн $
+        //                p.p1
+        //                    | -
+        //                    img(src="SVG/money.svg" alt="")
+        //                    |  -
+        //                p.p2= res.__("results-item-3")
+        //        br
+        //        br
+        //.section8(id="uslugi")
+        //    .container
+        //        .div
+        //            h2.pt-4.heading= res.__("services-heading-1")
+        //                span(style="background-color: #484848; color: whitesmoke")= res.__("services-heading-2")
+        //            .badge.badge-dark .
+        //            p(style="color: grey")= res.__("services-description")
+        //        .row
+        //            .col-lg-3.mt-4
+        //                .box
+        //                    img(src="images/okno_5_1.png" alt="")
+        //                    h2= res.__("services-city-1")
+        //                    button.btn.btn-outline-dark= res.__("more")
+        //            .col-lg-3.mt-4
+        //                .box
+        //                    img(src="images/okno_5_2.png" alt="")
+        //                    h2= res.__("services-city-2")
+        //                    button.btn.btn-outline-dark= res.__("more")
+        //            .col-lg-3.mt-4
+        //                .box
+        //                    img(src="images/okno_5_3.png" alt="")
+        //                    h2= res.__("services-city-3")
+        //                    button.btn.btn-outline-dark= res.__("more")
+        //            .col-lg-3.mt-4
+        //                .box
+        //                    img(src="images/okno_5_4.png" alt="")
+        //                    h2= res.__("services-city-4")
+        //                    button.btn.btn-outline-dark= res.__("more")
+        //            .col-lg-3.mt-4
+        //                .box
+        //                    img(src="images/okno_5_6.png" alt="")
+        //                    h2= res.__("services-city-5")
+        //                    button.btn.btn-outline-dark= res.__("more")
+        //            .col-lg-3.mt-4
+        //                .box
+        //                    img(src="images/okno_5_7.png" alt="")
+        //                    h2= res.__("services-city-6")
+        //                    button.btn.btn-outline-dark= res.__("more")
+        //            .col-lg-3.mt-4
+        //                .box
+        //                    img(src="images/okno_5_8.png" alt="")
+        //                    h2= res.__("services-city-7")
+        //                    button.btn.btn-outline-dark= res.__("more")
+        //            .col-lg-3.mt-4
+        //                .box
+        //                    img(src="images/okno_5_9.png" alt="")
+        //                    h2= res.__("services-city-8")
+        //                    button.btn.btn-outline-dark= res.__("more")
+        //        br
+        //        br
+        //        .row
+        //            .col-lg-3.offset-lg-3
+        //                .input-group.mb-3
+        //                    .input-group-prepend
+        //                        span.input-group-text.btn-dark.bg-dark
+        //                            img(src="SVG/Icon%20material-language.svg" alt="")
+        //                    input.form-control(type="text" placeholder="Все страны")
+        //            .col-lg-3
+        //                .input-group.mb-3
+        //                    input.form-control(type="search" placeholder="Поиск страны")
+        //                    .input-group-append
+        //                        span.input-group-text.btn-dark.bg-dark
+        //                            img(src="SVG/Icon%20feather-search.svg" alt="")
+        //        br
+        //        br
+        //.section9
+        //    .container
+        //        .row
+        //            .col-lg-7
+        //                h2.text-break.pt-4.heading= res.__("calcprice-heading-1")
+        //                    span(style="background-color: #484848; color: whitesmoke")= res.__("calcprice-heading-2")
+        //                br
+        //                p(style="font-size: 20px")= res.__("calcprice-description")
+        //                br
+        //            .col-lg-3.offset-lg-2.pt-lg-5.mb-4
+        //                .input-group
+        //                    .input-group-prepend
+        //                        span.input-group-text.btn-warning.bg-warning
+        //                            img(src="SVG/calculator%20·%20finance%20·%20business%20·%20calculation%20·%20money.svg" alt="")
+        //                    input.form-control(type="text" placeholder="Отправить Запрос")
+        //.section10
+        //    .container
+        //        .div
+        //            br
+        //            h2.pt-4.heading= res.__("fea-heading-1")
+        //                span(style="background-color: #484848; color: whitesmoke")= res.__("fea-heading-2")
+        //            .badge.badge-dark .
+        //            p(style="color: grey")= res.__("fea-description")
+        //            br
+        //        .row
+        //            .col-lg-3
+        //                .box
+        //                    img(src="SVG/work.svg" alt="")
+        //                    h4.mt-lg-2= res.__("fea-item-1-title")
+        //                    .badge .
+        //                    p= res.__("fea-item-1")
+        //            .col-lg-3
+        //                .box
+        //                    img(src="SVG/businessman.svg" alt="")
+        //                    h4.mt-lg-2= res.__("fea-item-2-title")
+        //                    .badge .
+        //                    p= res.__("fea-item-2")
+        //            .col-lg-3
+        //                .box
+        //                    img(src="SVG/certificate.svg" alt="")
+        //                    h4.mt-lg-2= res.__("fea-item-3-title")
+        //                    .badge .
+        //                    p= res.__("fea-item-3")
+        //            .col-lg-3
+        //                .box
+        //                    img(style="width: 64px" src="SVG/contract.svg" alt="")
+        //                    h4.mt-lg-2= res.__("fea-item-4-title")
+        //                    .badge .
+        //                    p= res.__("fea-item-4")
+        //        br
+        //.section11
+        //    .container
+        //        .row
+        //            .col-lg-6
+        //                .box
+        //                    br
+        //                    br
+        //                    br
+        //                    h2.text-break.pt-4.heading= res.__("info-heading-1")
+        //                        span(style="background-color: #484848; color: whitesmoke")= res.__("info-heading-2")
+        //                    .badge.badge-dark .
+        //                    br
+        //                    .list
+        //                        p
+        //                            i.bx.bx-right-arrow-circle.mr-3
+        //                            = res.__("info-item-1")
+        //                        p
+        //                            i.bx.bx-right-arrow-circle.mr-3
+        //                            = res.__("info-item-2")
+        //                        p
+        //                            i.bx.bx-right-arrow-circle.mr-3
+        //                            = res.__("info-item-3")
+        //                        p
+        //                            i.bx.bx-right-arrow-circle.mr-3
+        //                            = res.__("info-item-4")
+        //                        p
+        //                            i.bx.bx-right-arrow-circle.mr-3
+        //                            = res.__("info-item-5")
+        //                        p
+        //                            i.bx.bx-right-arrow-circle.mr-3
+        //                            = res.__("info-item-6")
+        //                        p
+        //                            i.bx.bx-right-arrow-circle.mr-3
+        //                            = res.__("info-item-7")
+        //                        p
+        //                            i.bx.bx-right-arrow-circle.mr-3
+        //                            = res.__("info-item-8")
+        //.section12
+        //    .container.pt-lg-5
+        //        h2.pt-4.heading= res.__("cities-heading-1")
+        //            span(style="background-color: #484848; color: whitesmoke")= res.__("cities-heading-2")
+        //        br
+        //        .row
+        //            .col-lg-1
+        //                img(src="SVG/united-states.svg" alt="")
+        //                p= res.__("cities-item-1")
+        //            .col-lg-1.offset-lg-1
+        //                img(src="SVG/germany.svg" alt="")
+        //                p= res.__("cities-item-2")
+        //            .col-lg-1.offset-lg-1
+        //                img(src="SVG/russia.svg" alt="")
+        //                p= res.__("cities-item-3")
+        //            .col-lg-1.offset-lg-1
+        //                img(src="SVG/china.svg" alt="")
+        //                p= res.__("cities-item-4")
+        //            .col-lg-1.offset-lg-1
+        //                img(src="SVG/turkey.svg" alt="")
+        //                p= res.__("cities-item-5")
+        //            .col-lg-1.offset-lg-1
+        //                img(src="SVG/uzbekistan.svg" alt="")
+        //                p= res.__("cities-item-6")
+        //        br
+        //        .row
+        //            .col-lg-3.offset-lg-4
+        //                .input-group
+        //                    .input-group-prepend
+        //                        span.input-group-text.btn-dark.bg-dark
+        //                            img(src="SVG/Icon%20material-language.svg" alt="")
+        //                    input.form-control(type="text" placeholder="Все страны")
+        .section13
+            .container-fluid.pt-lg-5
+                .div
+                    h2.pt-4.heading
+                        span(style="background-color: #484848; color: whitesmoke") НОВОСТИ
+                br
+
+                #demo.carousel.slide(data-ride="carousel")
+                    // Indicators
+                    // The slideshow
+                    .p-3.carousel-inner
+                        .carousel-item.active
+                            .container
+                                .row
+                                    .col-lg-4
+                                        .box.mb-3
+                                            img(src="images/okno_5_1.png" alt="")
+                                            h5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, quis!
+                                            i.bx.bx-calendar-event
+                                            span.ml-1 2020-06-21
+                                            i.bx.bxs-show.ml-3
+                                            span.ml-1 547
+                                            p
+                                                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores delectus
+                                                | numquam quisquam,
+                                                | saepe unde vero?
+                                            button.btn.btn-outline-dark Подробнее
+                                    .col-lg-4
+                                        .box.mb-3
+                                            img(src="images/okno_5_2.png" alt="")
+                                            h5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, quis!
+                                            i.bx.bx-calendar-event
+                                            span.ml-1 2020-06-21
+                                            i.bx.bxs-show.ml-3
+                                            span.ml-1 547
+                                            p
+                                                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores delectus
+                                                | numquam quisquam,
+                                                | saepe unde vero?
+                                            button.btn.btn-outline-dark Подробнее
+                                    .col-lg-4
+                                        .box.mb-3
+                                            img(src="images/okno_5_3.png" alt="")
+                                            h5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, quis!
+                                            i.bx.bx-calendar-event
+                                            span.ml-1 2020-06-21
+                                            i.bx.bxs-show.ml-3
+                                            span.ml-1 547
+                                            p
+                                                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores delectus
+                                                | numquam quisquam,
+                                                | saepe unde vero?
+                                            button.btn.btn-outline-dark Подробнее
+                        .carousel-item
+                            .container
+                                .row
+                                    .col-lg-4
+                                        .box.mb-3
+                                            img(src="images/okno_5_1.png" alt="")
+                                            h5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, quis!
+                                            i.bx.bx-calendar-event
+                                            span.ml-1 2020-06-21
+                                            i.bx.bxs-show.ml-3
+                                            span.ml-1 547
+                                            p
+                                                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores delectus
+                                                | numquam quisquam,
+                                                | saepe unde vero?
+                                            button.btn.btn-outline-dark Подробнее
+                                    .col-lg-4
+                                        .box.mb-3
+                                            img(src="images/okno_5_2.png" alt="")
+                                            h5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, quis!
+                                            i.bx.bx-calendar-event
+                                            span.ml-1 2020-06-21
+                                            i.bx.bxs-show.ml-3
+                                            span.ml-1 547
+                                            p
+                                                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores delectus
+                                                | numquam quisquam,
+                                                | saepe unde vero?
+                                            button.btn.btn-outline-dark Подробнее
+                                    .col-lg-4
+                                        .box.mb-3
+                                            img(src="images/okno_5_3.png" alt="")
+                                            h5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, quis!
+                                            i.bx.bx-calendar-event
+                                            span.ml-1 2020-06-21
+                                            i.bx.bxs-show.ml-3
+                                            span.ml-1 547
+                                            p
+                                                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores delectus
+                                                | numquam quisquam,
+                                                | saepe unde vero?
+                                            button.btn.btn-outline-dark Подробнее
+                        .carousel-item
+                            .container
+                                .row
+                                    .col-lg-4
+                                        .box.mb-3
+                                            img(src="images/okno_5_1.png" alt="")
+                                            h5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, quis!
+                                            span
+                                                i.bx.bx-calendar-event 2020-06-21
+                                            span
+                                                i.bx.bxs-show 547
+                                            p
+                                                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores delectus
+                                                | numquam quisquam,
+                                                | saepe unde vero?
+                                            button.btn.btn-outline-dark Подробнее
+                                    .col-lg-4
+                                        .box.mb-3
+                                            img(src="images/okno_5_2.png" alt="")
+                                            h5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, quis!
+                                            i.bx.bx-calendar-event
+                                            span.ml-1 2020-06-21
+                                            i.bx.bxs-show.ml-3
+                                            span.ml-1 547
+                                            p
+                                                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores delectus
+                                                | numquam quisquam,
+                                                | saepe unde vero?
+                                            button.btn.btn-outline-dark Подробнее
+                                    .col-lg-4
+                                        .box.mb-3
+                                            img(src="images/okno_5_3.png" alt="")
+                                            h5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, quis!
+                                            i.bx.bx-calendar-event
+                                            span.ml-1 2020-06-21
+                                            i.bx.bxs-show.ml-3
+                                            span.ml-1 547
+                                            p
+                                                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores delectus
+                                                | numquam quisquam,
+                                                | saepe unde vero?
+                                            button.btn.btn-outline-dark Подробнее
+                    ul.carousel-indicators.mt-5.invisible
+                        li.active(data-target="#demo" data-slide-to="0")
+                        li(data-target="#demo" data-slide-to="1")
+                        li(data-target="#demo" data-slide-to="2")
+                    // Left and right controls
+                    a.carousel-control-prev(href="#demo" data-slide="prev")
+                        i.bx.bx-chevron-left.icon-48.text-dark
+                    a.carousel-control-next(href="#demo" data-slide="next")
+                        i.bx.bx-chevron-right.icon-48.text-dark
         .section14.mt-lg-5(id="kontakti")
             .container
                 //.row.pt-lg-4
