@@ -559,23 +559,21 @@ html(lang="en")
                         i.bx.bx-chevron-right.icon-48.text-dark
         .section14.mt-lg-5(id="kontakti")
             .container
-                //.row.pt-lg-4
-                //    .col-lg-8.offset-lg-4
-                //        nav.navbar.navbar-expand-lg.navbar-white.bg-transparent
-                //            #navbarTogglerDemo02.collapse.navbar-collapse
-                //                ul.navbar-nav.mr-auto.mt-2.mt-lg-0
-                //                    li.nav-item.mx-lg-3
-                //                        a.nav-link(href="#") ГЛАВНАЯ
-                //                    li.nav-item.mx-lg-3
-                //                        a.nav-link(style="margin: 0;padding-left: 0;padding-right: 0" href="#")
-                //                            | ВИДЫ
-                //                            | ДЕЯТЕЛЬНОСТИ
-                //                    li.nav-item.mx-lg-3
-                //                        a.nav-link(href="#") УСЛУГИ
-                //                    li.nav-item.mx-lg-3
-                //                        a.nav-link(href="#") ПРОДУКЦИЯ
-                //                    li.nav-item.mx-lg-3
-                //                        a.nav-link(href="#") КОНТАКТЫ
+                .row.pt-lg-4
+                    .col-lg-8.offset-lg-4
+                        nav.navbar.navbar-expand-lg.navbar-white.bg-transparent
+                            #navbarTogglerDemo02.collapse.navbar-collapse
+                                ul.navbar-nav.mr-auto.mt-2.mt-lg-0
+                                    li.nav-item.mx-lg-2
+                                        a.a.nav-link(href="#")= res.__('main')
+                                    //li.nav-item.mx-lg-6
+                                    //    a.a.nav-link(style="margin: 0;padding-left: 0" href="#vid")= res.__('activities')
+                                    //li.nav-item.mx-lg-2
+                                    //    a.a.nav-link(href="#uslugi")= res.__('services')
+                                    li.nav-item.mx-lg-2
+                                        a.a.nav-link(href="#productsiya")= res.__('products')
+                                    li.nav-item.mx-lg-2
+                                        a.a.nav-link(href="#kontakti")= res.__('contacts')
                 hr
                 br
                 .row

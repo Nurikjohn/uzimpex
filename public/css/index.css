@@ -9,6 +9,7 @@ body .section1 {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    overflow-x: hidden;
 }
 
 body .section1 .ab img {
