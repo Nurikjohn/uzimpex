@@ -15,7 +15,7 @@ html(lang="en")
                     .container
                         .head
                             .row.pt-lg-3
-                                .col-lg-3
+                                .col-lg-4
                                     button.navbar-toggler.d-lg-none(type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation")
                                         span
                                             i.bx.bx-menu-alt-left.icon-menu
@@ -33,7 +33,7 @@ html(lang="en")
                                     dl
                                         dt= res.__('location')
                                         dd= settings.adress
-                                .col-lg-3.ab
+                                .col-lg-2.ab
                                     span
                                         img(src="SVG/Icon%20awesome-phone-alt.svg" alt="")
                                     dl
@@ -42,16 +42,16 @@ html(lang="en")
 
                         hr
                         .row
-                            .col-lg-8.offset-lg-4
+                            .col-lg-8.offset-lg-7
                                 nav.navbar.navbar-expand-lg.navbar-white.bg-transparent
                                     #navbarTogglerDemo03.collapse.navbar-collapse
                                         ul.navbar-nav.mr-auto.mt-2.mt-lg-0
                                             li.nav-item.mx-lg-2
                                                 a.a.nav-link(href="#")= res.__('main')
-                                            li.nav-item.mx-lg-6
-                                                a.a.nav-link(style="margin: 0;padding-left: 0" href="#vid")= res.__('activities')
-                                            li.nav-item.mx-lg-2
-                                                a.a.nav-link(href="#uslugi")= res.__('services')
+                                            //li.nav-item.mx-lg-6
+                                            //    a.a.nav-link(style="margin: 0;padding-left: 0" href="#vid")= res.__('activities')
+                                            //li.nav-item.mx-lg-2
+                                            //    a.a.nav-link(href="#uslugi")= res.__('services')
                                             li.nav-item.mx-lg-2
                                                 a.a.nav-link(href="#productsiya")= res.__('products')
                                             li.nav-item.mx-lg-2
@@ -65,34 +65,34 @@ html(lang="en")
                                                             | RU
                                                         option.text-dark(value="en" selected=(lang === 'en'))
                                                             | EN
-            //
-            //.container
-            //    .box
-            //        br
-            //        br
-            //        br
-            //        br
-            //        br
-            //        br
-            //        h1.text-break= res.__('hero-text')
-            //        p.text-break= settings.description
-            //        br
-            //        br
-            //        .row.mt-5
-            //            .col-lg-4
-            //                button.w-100.btn
-            //                    img(src="SVG/Icon%20ionic-ios-mail.svg" alt="")
-            //                    b= res.__('send-email')
-            //            .col-lg-4
-            //                button.w-100.btn
-            //                    img(src="SVG/Icon%20ionic-md-chatboxes.svg" alt="")
-            //                    b= res.__('send-question')
-            //            .col-lg-4
-            //                button.w-100.btn
-            //                    img(src="SVG/Icon%20awesome-phone-alt.svg" alt="")
-            //                    b= res.__('send-call')
-            //        br
-            //        br
+
+            .container
+                .box
+                    br
+                    br
+                    br
+                    br
+                    br
+                    br
+                    h1.text-break= res.__('hero-text')
+                    p.text-break= settings.description
+                    br
+                    br
+                    .row.mt-5
+                        .col-lg-4
+                            button.w-100.btn
+                                img(src="SVG/Icon%20ionic-ios-mail.svg" alt="")
+                                b= res.__('send-email')
+                        .col-lg-4
+                            button.w-100.btn
+                                img(src="SVG/Icon%20ionic-md-chatboxes.svg" alt="")
+                                b= res.__('send-question')
+                        .col-lg-4
+                            button.w-100.btn
+                                img(src="SVG/Icon%20awesome-phone-alt.svg" alt="")
+                                b= res.__('send-call')
+                    br
+                    br
         //.section2
         //    .container
         //        .row.my-lg-5
