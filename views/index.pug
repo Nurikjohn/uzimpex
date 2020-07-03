@@ -93,24 +93,28 @@ html(lang="en")
                                 b= res.__('send-call')
                     br
                     br
-        //.section2
-        //    .container
-        //        .row.my-lg-5
-        //            .col-lg-6
-        //                h1.text-break.pt-4.heading= res.__('wellcome-heading-1')
-        //                    span(style="background-color: #484848; color: whitesmoke")= res.__('wellcome-heading-2')
-        //                .badge.badge-dark
-        //                p(style="color: grey")= res.__('wellcome-description')
-        //                p= res.__('wellcome-description-2')
-        //                .row
-        //                    .col-lg-9
-        //                        h5
-        //                            b Xurshid Istamov
-        //                        p= res.__('director-label')
-        //                    .col-lg-3
-        //                        img(src="" alt="")
-        //            .col-lg-6
-        //                img.img-fluid(src="images/transportation-logistics_37416-135.png" alt="")
+        .section2
+            .container
+                .row.my-lg-5
+                    .col-lg-7
+                        h1= res.__("about-heading-1")
+                            span(style="background-color: #484848; color: whitesmoke")= res.__("about-heading-2")
+                        .badge.badge-dark .
+                        p= settings.aboutUS
+                        .row
+                            .col-lg-6
+                                h5
+                                    b= res.__("director-label")
+                                p.mb-1 Xurshid Istamov
+                                p +19172394422
+                            .col-lg-6
+                                h5
+                                    b= res.__("manager-label")
+                                p.mb-1 Sherzod Musayev
+                                p +19292616161
+                    .col-lg-5
+                        img.img-fluid(src="Images/transportation-logistics_37416-135.png" alt="")
+
         //.section3(id="vid")
         //    .container.py-lg-5
         //        h2.pt-4.heading= res.__('activities-heading-1')
