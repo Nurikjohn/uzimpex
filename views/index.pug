@@ -592,13 +592,13 @@ html(lang="en")
                         a(href=settings.twitter target="_blank")
                             .badge
                                 i.bx.bxl-twitter.icon
-                    .col-lg-2.offset-lg-3
+                    .col-lg-2.offset-lg-2
                         span
                             img(src="SVG/Icon%20weather-time-9.svg" alt="")
                         dl
                             dt= res.__('workingHours')
                             dd= res.__('hours')
-                    .col-lg-2(style="padding-left: 0; padding-right: 0")
+                    .col-lg-3(style="padding-left: 0; padding-right: 0")
                         span
                             img(src="SVG/Icon%20awesome-location-arrow.svg" alt="")
                         dl
@@ -613,11 +613,12 @@ html(lang="en")
                 br
             .foot.pt-lg-3(style="background-color: #666666")
                 .container
-                    .row
-                        .col-lg-3
-                            p 2008-2020 "UZIMPEX" LLC
-                        .col-lg-4.offset-lg-5
-                            p Copyright UMDSOFT
+                    .d-flex.justify-content-between
+                        .qw
+                            p 2020 "UZIMPEX" LLC
+                        .qw
+                            p Copyright &nbsp;
+                                a(href="http://umdsoft.uz/" target="blank") UMDSOFT
         br
         a(href="#navbar")
             .round
