@@ -56,7 +56,7 @@ $('.owl-carousel').owlCarousel({
   }
 });
 
-$('#lang-select').on("change", e => {
+$('.lang-select').on("change", e => {
   const lang = $(e.target).val();
 
   window.location.href = `${window.location.origin}/${lang}`

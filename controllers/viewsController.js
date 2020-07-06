@@ -19,10 +19,16 @@ exports.index = catchAsync(async (req, res, next) => {
     const settings = await Setting.findOne({lang});
 
     let products = await Product.find();
+    let productsAll;
 
     if (products.length) {
-        products = products.slice(Math.max(products.length - 4, 0));
+        products = products.reverse();
+        productsAll = products.slice(4, products.length);
+        products = products.slice(0, 4);
     }
+
+    console.log(products);
+    console.log(productsAll);
 
     let langIndex;
 
@@ -37,6 +43,7 @@ exports.index = catchAsync(async (req, res, next) => {
     res.status(200).render("index", {
         settings,
         products,
+        productsAll,
         lang,
         res,
         langIndex

@@ -10,89 +10,358 @@ html(lang="en")
         link(rel="stylesheet" href="css/bootstrap.min.css")
         link(href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet")
         .section1(id="navbar")
-            .container
-                .header
-                    .container
-                        .head
-                            .row.pt-lg-3
-                                .col-lg-4
-                                    button.navbar-toggler.d-lg-none(type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation")
-                                        span
-                                            i.bx.bx-menu-alt-left.icon-menu
-                                    .navbar-brand(href="#")
-                                        img(src=settings.image alt="")
-                                .col-lg-2.ab
-                                    span
-                                        img(src="SVG/Icon%20weather-time-9.svg" alt="")
-                                    dl
-                                        dt= res.__('workingHours')
-                                        dd= res.__('hours')
-                                .col-lg-4.ab(style="padding-right: 0; padding-left: 0")
-                                    span
-                                        img(src="SVG/Icon%20awesome-location-arrow.svg" alt="")
-                                    dl
-                                        dt= res.__('location')
-                                        dd= settings.adress
-                                .col-lg-2.ab
-                                    span
-                                        img(src="SVG/Icon%20awesome-phone-alt.svg" alt="")
-                                    dl
-                                        dt= res.__('phone')
-                                        dd= settings.phone
+            #carouselExampleCaptions.carousel.slide(data-ride="carousel" style="height: 100vh;")
+                ol.carousel-indicators
+                    li.active(data-target="#carouselExampleCaptions" data-slide-to="0")
+                    li(data-target="#carouselExampleCaptions" data-slide-to="1")
+                    li(data-target="#carouselExampleCaptions" data-slide-to="2")
+                .carousel-inner(style="height: 100vh;")
+                    .carousel-item.active
+                        .bg-image-1
+                        .container
+                            .header
+                                .container
+                                    .head
+                                        .row.pt-lg-3
+                                            .col-lg-4
+                                                button.navbar-toggler.d-lg-none(type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation")
+                                                    span
+                                                        i.bx.bx-menu-alt-left.icon-menu
+                                                .navbar-brand(href="#")
+                                                    img(src=settings.image alt="")
+                                            .col-lg-2.ab
+                                                span
+                                                    img(src="SVG/Icon%20weather-time-9.svg" alt="")
+                                                dl
+                                                    dt= res.__('workingHours')
+                                                    dd= res.__('hours')
+                                            .col-lg-4.ab(style="padding-right: 0; padding-left: 0")
+                                                span
+                                                    img(src="SVG/Icon%20awesome-location-arrow.svg" alt="")
+                                                dl
+                                                    dt= res.__('location')
+                                                    dd= settings.adress
+                                            .col-lg-2.ab
+                                                span
+                                                    img(src="SVG/Icon%20awesome-phone-alt.svg" alt="")
+                                                dl
+                                                    dt= res.__('phone')
+                                                    dd= settings.phone
 
-                        hr
-                        .row
-                            .col-lg-8.offset-lg-7
-                                nav.navbar.navbar-expand-lg.navbar-white.bg-transparent
-                                    #navbarTogglerDemo03.collapse.navbar-collapse
-                                        ul.navbar-nav.mr-auto.mt-2.mt-lg-0
-                                            li.nav-item.mx-lg-2
-                                                a.a.nav-link(href="#")= res.__('main')
-                                            //li.nav-item.mx-lg-6
-                                            //    a.a.nav-link(style="margin: 0;padding-left: 0" href="#vid")= res.__('activities')
-                                            //li.nav-item.mx-lg-2
-                                            //    a.a.nav-link(href="#uslugi")= res.__('services')
-                                            li.nav-item.mx-lg-2
-                                                a.a.nav-link(href="#productsiya")= res.__('products')
-                                            li.nav-item.mx-lg-2
-                                                a.a.nav-link(href="#kontakti")= res.__('contacts')
-                                            li.nav-item.mx-lg-2
-                                                .form-group.p-1
-                                                    select#lang-select.form-control.form-control-sm.bg-transparent.text-white
-                                                        option.text-dark(value="uz" selected=(lang === 'uz'))
-                                                            | UZ
-                                                        option.text-dark(value="ru" selected=(lang === 'ru'))
-                                                            | RU
-                                                        option.text-dark(value="en" selected=(lang === 'en'))
-                                                            | EN
+                                    hr
+                                    .row
+                                        .col-lg-8.offset-lg-7
+                                            nav.navbar.navbar-expand-lg.navbar-white.bg-transparent
+                                                #navbarTogglerDemo01.collapse.navbar-collapse
+                                                    ul.navbar-nav.mr-auto.mt-2.mt-lg-0
+                                                        li.nav-item.mx-lg-2
+                                                            a.a.nav-link(href="#")= res.__('main')
+                                                        //li.nav-item.mx-lg-6
+                                                        //    a.a.nav-link(style="margin: 0;padding-left: 0" href="#vid")= res.__('activities')
+                                                        //li.nav-item.mx-lg-2
+                                                        //    a.a.nav-link(href="#uslugi")= res.__('services')
+                                                        li.nav-item.mx-lg-2
+                                                            a.a.nav-link(href="#productsiya")= res.__('products')
+                                                        li.nav-item.mx-lg-2
+                                                            a.a.nav-link(href="#kontakti")= res.__('contacts')
+                                                        li.nav-item.mx-lg-2
+                                                            .form-group.p-1
+                                                                select.lang-select.form-control.form-control-sm.bg-transparent.text-white
+                                                                    option.text-dark(value="uz" selected=(lang === 'uz'))
+                                                                        | UZ
+                                                                    option.text-dark(value="ru" selected=(lang === 'ru'))
+                                                                        | RU
+                                                                    option.text-dark(value="en" selected=(lang === 'en'))
+                                                                        | EN
 
-            .container
-                .box
-                    br
-                    br
-                    br
-                    br
-                    br
-                    br
-                    h1.text-break= res.__('hero-text')
-                    p.text-break= settings.description
-                    br
-                    br
-                    .row.mt-5
-                        .col-lg-4
-                            button.w-100.btn
-                                img(src="SVG/Icon%20ionic-ios-mail.svg" alt="")
-                                b= res.__('send-email')
-                        .col-lg-4
-                            button.w-100.btn
-                                img(src="SVG/Icon%20ionic-md-chatboxes.svg" alt="")
-                                b= res.__('send-question')
-                        .col-lg-4
-                            button.w-100.btn
-                                img(src="SVG/Icon%20awesome-phone-alt.svg" alt="")
-                                b= res.__('send-call')
-                    br
-                    br
+                        .container
+                            .box
+                                br
+                                br
+                                br
+                                br
+                                br
+                                br
+                                h1.text-break= res.__('hero-text')
+                                p.text-break= settings.description
+                                br
+                                br
+                                .row.mt-5
+                                    .col-lg-4
+                                        button.w-100.btn
+                                            img(src="SVG/Icon%20ionic-ios-mail.svg" alt="")
+                                            b= res.__('send-email')
+                                    .col-lg-4
+                                        button.w-100.btn
+                                            img(src="SVG/Icon%20ionic-md-chatboxes.svg" alt="")
+                                            b= res.__('send-question')
+                                    .col-lg-4
+                                        button.w-100.btn
+                                            img(src="SVG/Icon%20awesome-phone-alt.svg" alt="")
+                                            b= res.__('send-call')
+                                br
+                                br
+                    .carousel-item
+                        .bg-image-2
+                        .container
+                            .header
+                                .container
+                                    .head
+                                        .row.pt-lg-3
+                                            .col-lg-4
+                                                button.navbar-toggler.d-lg-none(type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation")
+                                                    span
+                                                        i.bx.bx-menu-alt-left.icon-menu
+                                                .navbar-brand(href="#")
+                                                    img(src=settings.image alt="")
+                                            .col-lg-2.ab
+                                                span
+                                                    img(src="SVG/Icon%20weather-time-9.svg" alt="")
+                                                dl
+                                                    dt= res.__('workingHours')
+                                                    dd= res.__('hours')
+                                            .col-lg-4.ab(style="padding-right: 0; padding-left: 0")
+                                                span
+                                                    img(src="SVG/Icon%20awesome-location-arrow.svg" alt="")
+                                                dl
+                                                    dt= res.__('location')
+                                                    dd= settings.adress
+                                            .col-lg-2.ab
+                                                span
+                                                    img(src="SVG/Icon%20awesome-phone-alt.svg" alt="")
+                                                dl
+                                                    dt= res.__('phone')
+                                                    dd= settings.phone
+
+                                    hr
+                                    .row
+                                        .col-lg-8.offset-lg-7
+                                            nav.navbar.navbar-expand-lg.navbar-white.bg-transparent
+                                                #navbarTogglerDemo02.collapse.navbar-collapse
+                                                    ul.navbar-nav.mr-auto.mt-2.mt-lg-0
+                                                        li.nav-item.mx-lg-2
+                                                            a.a.nav-link(href="#")= res.__('main')
+                                                        //li.nav-item.mx-lg-6
+                                                        //    a.a.nav-link(style="margin: 0;padding-left: 0" href="#vid")= res.__('activities')
+                                                        //li.nav-item.mx-lg-2
+                                                        //    a.a.nav-link(href="#uslugi")= res.__('services')
+                                                        li.nav-item.mx-lg-2
+                                                            a.a.nav-link(href="#productsiya")= res.__('products')
+                                                        li.nav-item.mx-lg-2
+                                                            a.a.nav-link(href="#kontakti")= res.__('contacts')
+                                                        li.nav-item.mx-lg-2
+                                                            .form-group.p-1
+                                                                select.lang-select.form-control.form-control-sm.bg-transparent.text-white
+                                                                    option.text-dark(value="uz" selected=(lang === 'uz'))
+                                                                        | UZ
+                                                                    option.text-dark(value="ru" selected=(lang === 'ru'))
+                                                                        | RU
+                                                                    option.text-dark(value="en" selected=(lang === 'en'))
+                                                                        | EN
+
+                        .container
+                            .box
+                                br
+                                br
+                                br
+                                br
+                                br
+                                br
+                                h1.text-break= res.__('hero-text')
+                                p.text-break= settings.description
+                                br
+                                br
+                                .row.mt-5
+                                    .col-lg-4
+                                        button.w-100.btn
+                                            img(src="SVG/Icon%20ionic-ios-mail.svg" alt="")
+                                            b= res.__('send-email')
+                                    .col-lg-4
+                                        button.w-100.btn
+                                            img(src="SVG/Icon%20ionic-md-chatboxes.svg" alt="")
+                                            b= res.__('send-question')
+                                    .col-lg-4
+                                        button.w-100.btn
+                                            img(src="SVG/Icon%20awesome-phone-alt.svg" alt="")
+                                            b= res.__('send-call')
+                                br
+                                br
+                    .carousel-item
+                        .bg-image-3
+                        .container
+                            .header
+                                .container
+                                    .head
+                                        .row.pt-lg-3
+                                            .col-lg-4
+                                                button.navbar-toggler.d-lg-none(type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation")
+                                                    span
+                                                        i.bx.bx-menu-alt-left.icon-menu
+                                                .navbar-brand(href="#")
+                                                    img(src=settings.image alt="")
+                                            .col-lg-2.ab
+                                                span
+                                                    img(src="SVG/Icon%20weather-time-9.svg" alt="")
+                                                dl
+                                                    dt= res.__('workingHours')
+                                                    dd= res.__('hours')
+                                            .col-lg-4.ab(style="padding-right: 0; padding-left: 0")
+                                                span
+                                                    img(src="SVG/Icon%20awesome-location-arrow.svg" alt="")
+                                                dl
+                                                    dt= res.__('location')
+                                                    dd= settings.adress
+                                            .col-lg-2.ab
+                                                span
+                                                    img(src="SVG/Icon%20awesome-phone-alt.svg" alt="")
+                                                dl
+                                                    dt= res.__('phone')
+                                                    dd= settings.phone
+
+                                    hr
+                                    .row
+                                        .col-lg-8.offset-lg-7
+                                            nav.navbar.navbar-expand-lg.navbar-white.bg-transparent
+                                                #navbarTogglerDemo03.collapse.navbar-collapse
+                                                    ul.navbar-nav.mr-auto.mt-2.mt-lg-0
+                                                        li.nav-item.mx-lg-2
+                                                            a.a.nav-link(href="#")= res.__('main')
+                                                        //li.nav-item.mx-lg-6
+                                                        //    a.a.nav-link(style="margin: 0;padding-left: 0" href="#vid")= res.__('activities')
+                                                        //li.nav-item.mx-lg-2
+                                                        //    a.a.nav-link(href="#uslugi")= res.__('services')
+                                                        li.nav-item.mx-lg-2
+                                                            a.a.nav-link(href="#productsiya")= res.__('products')
+                                                        li.nav-item.mx-lg-2
+                                                            a.a.nav-link(href="#kontakti")= res.__('contacts')
+                                                        li.nav-item.mx-lg-2
+                                                            .form-group.p-1
+                                                                select.lang-select.form-control.form-control-sm.bg-transparent.text-white
+                                                                    option.text-dark(value="uz" selected=(lang === 'uz'))
+                                                                        | UZ
+                                                                    option.text-dark(value="ru" selected=(lang === 'ru'))
+                                                                        | RU
+                                                                    option.text-dark(value="en" selected=(lang === 'en'))
+                                                                        | EN
+
+                        .container
+                            .box
+                                br
+                                br
+                                br
+                                br
+                                br
+                                br
+                                h1.text-break= res.__('hero-text')
+                                p.text-break= settings.description
+                                br
+                                br
+                                .row.mt-5
+                                    .col-lg-4
+                                        button.w-100.btn
+                                            img(src="SVG/Icon%20ionic-ios-mail.svg" alt="")
+                                            b= res.__('send-email')
+                                    .col-lg-4
+                                        button.w-100.btn
+                                            img(src="SVG/Icon%20ionic-md-chatboxes.svg" alt="")
+                                            b= res.__('send-question')
+                                    .col-lg-4
+                                        button.w-100.btn
+                                            img(src="SVG/Icon%20awesome-phone-alt.svg" alt="")
+                                            b= res.__('send-call')
+                                br
+                                br
+
+                //a.carousel-control-prev(href="#carouselExampleCaptions" role="button" data-slide="prev")
+                //    span.carousel-control-prev-icon(aria-hidden="true")
+                //    span.sr-only Previous
+                //a.carousel-control-next(href="#carouselExampleCaptions" role="button" data-slide="next")
+                //    span.carousel-control-next-icon(aria-hidden="true")
+                //    span.sr-only Next
+
+            //.container
+            //    .header
+            //        .container
+            //            .head
+            //                .row.pt-lg-3
+            //                    .col-lg-4
+            //                        button.navbar-toggler.d-lg-none(type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation")
+            //                            span
+            //                                i.bx.bx-menu-alt-left.icon-menu
+            //                        .navbar-brand(href="#")
+            //                            img(src=settings.image alt="")
+            //                    .col-lg-2.ab
+            //                        span
+            //                            img(src="SVG/Icon%20weather-time-9.svg" alt="")
+            //                        dl
+            //                            dt= res.__('workingHours')
+            //                            dd= res.__('hours')
+            //                    .col-lg-4.ab(style="padding-right: 0; padding-left: 0")
+            //                        span
+            //                            img(src="SVG/Icon%20awesome-location-arrow.svg" alt="")
+            //                        dl
+            //                            dt= res.__('location')
+            //                            dd= settings.adress
+            //                    .col-lg-2.ab
+            //                        span
+            //                            img(src="SVG/Icon%20awesome-phone-alt.svg" alt="")
+            //                        dl
+            //                            dt= res.__('phone')
+            //                            dd= settings.phone
+            //
+            //            hr
+            //            .row
+            //                .col-lg-8.offset-lg-7
+            //                    nav.navbar.navbar-expand-lg.navbar-white.bg-transparent
+            //                        #navbarTogglerDemo03.collapse.navbar-collapse
+            //                            ul.navbar-nav.mr-auto.mt-2.mt-lg-0
+            //                                li.nav-item.mx-lg-2
+            //                                    a.a.nav-link(href="#")= res.__('main')
+            //                                //li.nav-item.mx-lg-6
+            //                                //    a.a.nav-link(style="margin: 0;padding-left: 0" href="#vid")= res.__('activities')
+            //                                //li.nav-item.mx-lg-2
+            //                                //    a.a.nav-link(href="#uslugi")= res.__('services')
+            //                                li.nav-item.mx-lg-2
+            //                                    a.a.nav-link(href="#productsiya")= res.__('products')
+            //                                li.nav-item.mx-lg-2
+            //                                    a.a.nav-link(href="#kontakti")= res.__('contacts')
+            //                                li.nav-item.mx-lg-2
+            //                                    .form-group.p-1
+            //                                        select#lang-select.form-control.form-control-sm.bg-transparent.text-white
+            //                                            option.text-dark(value="uz" selected=(lang === 'uz'))
+            //                                                | UZ
+            //                                            option.text-dark(value="ru" selected=(lang === 'ru'))
+            //                                                | RU
+            //                                            option.text-dark(value="en" selected=(lang === 'en'))
+            //                                                | EN
+            //
+            //.container
+            //    .box
+            //        br
+            //        br
+            //        br
+            //        br
+            //        br
+            //        br
+            //        h1.text-break= res.__('hero-text')
+            //        p.text-break= settings.description
+            //        br
+            //        br
+            //        .row.mt-5
+            //            .col-lg-4
+            //                button.w-100.btn
+            //                    img(src="SVG/Icon%20ionic-ios-mail.svg" alt="")
+            //                    b= res.__('send-email')
+            //            .col-lg-4
+            //                button.w-100.btn
+            //                    img(src="SVG/Icon%20ionic-md-chatboxes.svg" alt="")
+            //                    b= res.__('send-question')
+            //            .col-lg-4
+            //                button.w-100.btn
+            //                    img(src="SVG/Icon%20awesome-phone-alt.svg" alt="")
+            //                    b= res.__('send-call')
+            //        br
+            //        br
         .section2
             .container
                 .row.my-lg-5
@@ -180,6 +449,20 @@ html(lang="en")
                                     h5.card-title= product.title[langIndex]
                                     p.text-truncate.card-text= product.description[langIndex]
                                     button.btn.btn-outline-dark.product-more= res.__('more')
+                #collapseExample.collapse
+                    .row
+                        for product in productsAll
+                            .col-lg-6.mb-4
+                                .card.border-0
+                                    img.card-img-top(src=product.image alt="..." style="max-height: 300px")
+                                    .card-body.mr-4.ml-4.border.mt-n5.bg-white
+                                        h5.card-title= product.title[langIndex]
+                                        p.text-truncate.card-text= product.description[langIndex]
+                                        button.btn.btn-outline-dark.product-more= res.__('more')
+
+                .d-flex.justify-content-center
+                    button.btn.btn-outline-dark.mt-3(type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample")= res.__("more")
+                        
 
         .section5
             .container.py-lg-5
@@ -383,184 +666,39 @@ html(lang="en")
         //                        p
         //                            i.bx.bx-right-arrow-circle.mr-3
         //                            = res.__("info-item-8")
-        //.section12
-        //    .container.pt-lg-5
-        //        h2.pt-4.heading= res.__("cities-heading-1")
-        //            span(style="background-color: #484848; color: whitesmoke")= res.__("cities-heading-2")
-        //        br
-        //        .row
-        //            .col-lg-1
-        //                img(src="SVG/united-states.svg" alt="")
-        //                p= res.__("cities-item-1")
-        //            .col-lg-1.offset-lg-1
-        //                img(src="SVG/germany.svg" alt="")
-        //                p= res.__("cities-item-2")
-        //            .col-lg-1.offset-lg-1
-        //                img(src="SVG/russia.svg" alt="")
-        //                p= res.__("cities-item-3")
-        //            .col-lg-1.offset-lg-1
-        //                img(src="SVG/china.svg" alt="")
-        //                p= res.__("cities-item-4")
-        //            .col-lg-1.offset-lg-1
-        //                img(src="SVG/turkey.svg" alt="")
-        //                p= res.__("cities-item-5")
-        //            .col-lg-1.offset-lg-1
-        //                img(src="SVG/uzbekistan.svg" alt="")
-        //                p= res.__("cities-item-6")
-        //        br
-        //        .row
-        //            .col-lg-3.offset-lg-4
-        //                .input-group
-        //                    .input-group-prepend
-        //                        span.input-group-text.btn-dark.bg-dark
-        //                            img(src="SVG/Icon%20material-language.svg" alt="")
-        //                    input.form-control(type="text" placeholder="Все страны")
-        .section13
-            .container-fluid.pt-lg-5
-                .div
-                    h2.pt-4.heading
-                        span(style="background-color: #484848; color: whitesmoke") НОВОСТИ
+        .section12
+            .container.pt-lg-5
+                h2.pt-4.heading= res.__("cities-heading-1")
+                    span(style="background-color: #484848; color: whitesmoke")= res.__("cities-heading-2")
                 br
-
-                #demo.carousel.slide(data-ride="carousel")
-                    // Indicators
-                    // The slideshow
-                    .p-3.carousel-inner
-                        .carousel-item.active
-                            .container
-                                .row
-                                    .col-lg-4
-                                        .box.mb-3
-                                            img(src="images/okno_5_1.png" alt="")
-                                            h5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, quis!
-                                            i.bx.bx-calendar-event
-                                            span.ml-1 2020-06-21
-                                            i.bx.bxs-show.ml-3
-                                            span.ml-1 547
-                                            p
-                                                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores delectus
-                                                | numquam quisquam,
-                                                | saepe unde vero?
-                                            button.btn.btn-outline-dark Подробнее
-                                    .col-lg-4
-                                        .box.mb-3
-                                            img(src="images/okno_5_2.png" alt="")
-                                            h5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, quis!
-                                            i.bx.bx-calendar-event
-                                            span.ml-1 2020-06-21
-                                            i.bx.bxs-show.ml-3
-                                            span.ml-1 547
-                                            p
-                                                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores delectus
-                                                | numquam quisquam,
-                                                | saepe unde vero?
-                                            button.btn.btn-outline-dark Подробнее
-                                    .col-lg-4
-                                        .box.mb-3
-                                            img(src="images/okno_5_3.png" alt="")
-                                            h5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, quis!
-                                            i.bx.bx-calendar-event
-                                            span.ml-1 2020-06-21
-                                            i.bx.bxs-show.ml-3
-                                            span.ml-1 547
-                                            p
-                                                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores delectus
-                                                | numquam quisquam,
-                                                | saepe unde vero?
-                                            button.btn.btn-outline-dark Подробнее
-                        .carousel-item
-                            .container
-                                .row
-                                    .col-lg-4
-                                        .box.mb-3
-                                            img(src="images/okno_5_1.png" alt="")
-                                            h5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, quis!
-                                            i.bx.bx-calendar-event
-                                            span.ml-1 2020-06-21
-                                            i.bx.bxs-show.ml-3
-                                            span.ml-1 547
-                                            p
-                                                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores delectus
-                                                | numquam quisquam,
-                                                | saepe unde vero?
-                                            button.btn.btn-outline-dark Подробнее
-                                    .col-lg-4
-                                        .box.mb-3
-                                            img(src="images/okno_5_2.png" alt="")
-                                            h5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, quis!
-                                            i.bx.bx-calendar-event
-                                            span.ml-1 2020-06-21
-                                            i.bx.bxs-show.ml-3
-                                            span.ml-1 547
-                                            p
-                                                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores delectus
-                                                | numquam quisquam,
-                                                | saepe unde vero?
-                                            button.btn.btn-outline-dark Подробнее
-                                    .col-lg-4
-                                        .box.mb-3
-                                            img(src="images/okno_5_3.png" alt="")
-                                            h5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, quis!
-                                            i.bx.bx-calendar-event
-                                            span.ml-1 2020-06-21
-                                            i.bx.bxs-show.ml-3
-                                            span.ml-1 547
-                                            p
-                                                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores delectus
-                                                | numquam quisquam,
-                                                | saepe unde vero?
-                                            button.btn.btn-outline-dark Подробнее
-                        .carousel-item
-                            .container
-                                .row
-                                    .col-lg-4
-                                        .box.mb-3
-                                            img(src="images/okno_5_1.png" alt="")
-                                            h5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, quis!
-                                            span
-                                                i.bx.bx-calendar-event 2020-06-21
-                                            span
-                                                i.bx.bxs-show 547
-                                            p
-                                                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores delectus
-                                                | numquam quisquam,
-                                                | saepe unde vero?
-                                            button.btn.btn-outline-dark Подробнее
-                                    .col-lg-4
-                                        .box.mb-3
-                                            img(src="images/okno_5_2.png" alt="")
-                                            h5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, quis!
-                                            i.bx.bx-calendar-event
-                                            span.ml-1 2020-06-21
-                                            i.bx.bxs-show.ml-3
-                                            span.ml-1 547
-                                            p
-                                                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores delectus
-                                                | numquam quisquam,
-                                                | saepe unde vero?
-                                            button.btn.btn-outline-dark Подробнее
-                                    .col-lg-4
-                                        .box.mb-3
-                                            img(src="images/okno_5_3.png" alt="")
-                                            h5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, quis!
-                                            i.bx.bx-calendar-event
-                                            span.ml-1 2020-06-21
-                                            i.bx.bxs-show.ml-3
-                                            span.ml-1 547
-                                            p
-                                                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores delectus
-                                                | numquam quisquam,
-                                                | saepe unde vero?
-                                            button.btn.btn-outline-dark Подробнее
-                    ul.carousel-indicators.mt-5.invisible
-                        li.active(data-target="#demo" data-slide-to="0")
-                        li(data-target="#demo" data-slide-to="1")
-                        li(data-target="#demo" data-slide-to="2")
-                    // Left and right controls
-                    a.carousel-control-prev(href="#demo" data-slide="prev")
-                        i.bx.bx-chevron-left.icon-48.text-dark
-                    a.carousel-control-next(href="#demo" data-slide="next")
-                        i.bx.bx-chevron-right.icon-48.text-dark
+                .row.mt-5.mb-3
+                    .col-lg-2.d-flex.align-items-center.flex-column.scale
+                        img(src="SVG/united-states.svg" alt="")
+                        p= res.__("cities-item-1")
+                    .col-lg-2.d-flex.align-items-center.flex-column.scale
+                        img(src="SVG/germany.svg" alt="")
+                        p= res.__("cities-item-2")
+                    .col-lg-2.d-flex.align-items-center.flex-column.scale
+                        img(src="SVG/russia.svg" alt="")
+                        p= res.__("cities-item-3")
+                    .col-lg-2.d-flex.align-items-center.flex-column.scale
+                        img(src="SVG/china.svg" alt="")
+                        p= res.__("cities-item-4")
+                    .col-lg-2.d-flex.align-items-center.flex-column.scale
+                        img(src="SVG/turkey.svg" alt="")
+                        p= res.__("cities-item-5")
+                    .col-lg-2.d-flex.align-items-center.flex-column.scale
+                        img(src="SVG/uzbekistan.svg" alt="")
+                        p= res.__("cities-item-6")
+                br
+                //- .row
+                //-     .col-lg-3.offset-lg-4
+                //-         .input-group
+                //-             .input-group-prepend
+                //-                 span.input-group-text.btn-dark.bg-dark
+                //-                     img(src="SVG/Icon%20material-language.svg" alt="")
+                //-             input.form-control(type="text" placeholder="Все страны")
+        
         .section14.mt-lg-5(id="kontakti")
             .container
                 .row.pt-lg-4
