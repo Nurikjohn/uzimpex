@@ -10,11 +10,12 @@ html(lang="en")
         link(rel="stylesheet" href="css/bootstrap.min.css")
         link(href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet")
         .section1(id="navbar")
-            #carouselExampleCaptions.carousel.slide(data-ride="carousel" style="height: 100vh;")
+            #carouselExampleCaptions.carousel.carousel-fade.slide(data-ride="carousel" style="height: 100vh;")
                 ol.carousel-indicators
                     li.active(data-target="#carouselExampleCaptions" data-slide-to="0")
                     li(data-target="#carouselExampleCaptions" data-slide-to="1")
                     li(data-target="#carouselExampleCaptions" data-slide-to="2")
+                    li(data-target="#carouselExampleCaptions" data-slide-to="3")
                 .carousel-inner(style="height: 100vh;")
                     .carousel-item.active
                         .bg-image-1
@@ -40,7 +41,8 @@ html(lang="en")
                                                     img(src="SVG/Icon%20awesome-location-arrow.svg" alt="")
                                                 dl
                                                     dt= res.__('location')
-                                                    dd= settings.adress
+                                                    dd
+                                                        a.text-reset( href="https://www.google.ru/maps/place/8855+Bay+Pkwy,+Brooklyn,+NY+11214,+%D0%A1%D0%A8%D0%90/@40.5967234,-74.0009946,17z/data=!3m1!4b1!4m5!3m4!1s0x89c245a71e80a429:0x4b7ea2a03e30f0d!8m2!3d40.5967193!4d-73.9988059" target="blank")= settings.adress
                                             .col-lg-2.ab
                                                 span
                                                     img(src="SVG/Icon%20awesome-phone-alt.svg" alt="")
@@ -86,23 +88,9 @@ html(lang="en")
                                 p.text-break= settings.description
                                 br
                                 br
-                                .row.mt-5
-                                    .col-lg-4
-                                        button.w-100.btn
-                                            img(src="SVG/Icon%20ionic-ios-mail.svg" alt="")
-                                            b= res.__('send-email')
-                                    .col-lg-4
-                                        button.w-100.btn
-                                            img(src="SVG/Icon%20ionic-md-chatboxes.svg" alt="")
-                                            b= res.__('send-question')
-                                    .col-lg-4
-                                        button.w-100.btn
-                                            img(src="SVG/Icon%20awesome-phone-alt.svg" alt="")
-                                            b= res.__('send-call')
-                                br
-                                br
+                                
                     .carousel-item
-                        .bg-image-2
+                        .bg-image-4
                         .container
                             .header
                                 .container
@@ -125,7 +113,8 @@ html(lang="en")
                                                     img(src="SVG/Icon%20awesome-location-arrow.svg" alt="")
                                                 dl
                                                     dt= res.__('location')
-                                                    dd= settings.adress
+                                                    dd
+                                                        a.text-reset( href="https://www.google.ru/maps/place/8855+Bay+Pkwy,+Brooklyn,+NY+11214,+%D0%A1%D0%A8%D0%90/@40.5967234,-74.0009946,17z/data=!3m1!4b1!4m5!3m4!1s0x89c245a71e80a429:0x4b7ea2a03e30f0d!8m2!3d40.5967193!4d-73.9988059" target="blank")= settings.adress
                                             .col-lg-2.ab
                                                 span
                                                     img(src="SVG/Icon%20awesome-phone-alt.svg" alt="")
@@ -171,21 +160,79 @@ html(lang="en")
                                 p.text-break= settings.description
                                 br
                                 br
-                                .row.mt-5
-                                    .col-lg-4
-                                        button.w-100.btn
-                                            img(src="SVG/Icon%20ionic-ios-mail.svg" alt="")
-                                            b= res.__('send-email')
-                                    .col-lg-4
-                                        button.w-100.btn
-                                            img(src="SVG/Icon%20ionic-md-chatboxes.svg" alt="")
-                                            b= res.__('send-question')
-                                    .col-lg-4
-                                        button.w-100.btn
-                                            img(src="SVG/Icon%20awesome-phone-alt.svg" alt="")
-                                            b= res.__('send-call')
+                                
+                    .carousel-item
+                        .bg-image-2
+                        .container
+                            .header
+                                .container
+                                    .head
+                                        .row.pt-lg-3
+                                            .col-lg-4
+                                                button.navbar-toggler.d-lg-none(type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation")
+                                                    span
+                                                        i.bx.bx-menu-alt-left.icon-menu
+                                                .navbar-brand(href="#")
+                                                    img(src=settings.image alt="")
+                                            .col-lg-2.ab
+                                                span
+                                                    img(src="SVG/Icon%20weather-time-9.svg" alt="")
+                                                dl
+                                                    dt= res.__('workingHours')
+                                                    dd= res.__('hours')
+                                            .col-lg-4.ab(style="padding-right: 0; padding-left: 0")
+                                                span
+                                                    img(src="SVG/Icon%20awesome-location-arrow.svg" alt="")
+                                                dl
+                                                    dt= res.__('location')
+                                                    dd
+                                                        a.text-reset( href="https://www.google.ru/maps/place/8855+Bay+Pkwy,+Brooklyn,+NY+11214,+%D0%A1%D0%A8%D0%90/@40.5967234,-74.0009946,17z/data=!3m1!4b1!4m5!3m4!1s0x89c245a71e80a429:0x4b7ea2a03e30f0d!8m2!3d40.5967193!4d-73.9988059" target="blank")= settings.adress
+                                            .col-lg-2.ab
+                                                span
+                                                    img(src="SVG/Icon%20awesome-phone-alt.svg" alt="")
+                                                dl
+                                                    dt= res.__('phone')
+                                                    dd= settings.phone
+
+                                    hr
+                                    .row
+                                        .col-lg-8.offset-lg-7
+                                            nav.navbar.navbar-expand-lg.navbar-white.bg-transparent
+                                                #navbarTogglerDemo02.collapse.navbar-collapse
+                                                    ul.navbar-nav.mr-auto.mt-2.mt-lg-0
+                                                        li.nav-item.mx-lg-2
+                                                            a.a.nav-link(href="#")= res.__('main')
+                                                        //li.nav-item.mx-lg-6
+                                                        //    a.a.nav-link(style="margin: 0;padding-left: 0" href="#vid")= res.__('activities')
+                                                        //li.nav-item.mx-lg-2
+                                                        //    a.a.nav-link(href="#uslugi")= res.__('services')
+                                                        li.nav-item.mx-lg-2
+                                                            a.a.nav-link(href="#productsiya")= res.__('products')
+                                                        li.nav-item.mx-lg-2
+                                                            a.a.nav-link(href="#kontakti")= res.__('contacts')
+                                                        li.nav-item.mx-lg-2
+                                                            .form-group.p-1
+                                                                select.lang-select.form-control.form-control-sm.bg-transparent.text-white
+                                                                    option.text-dark(value="uz" selected=(lang === 'uz'))
+                                                                        | UZ
+                                                                    option.text-dark(value="ru" selected=(lang === 'ru'))
+                                                                        | RU
+                                                                    option.text-dark(value="en" selected=(lang === 'en'))
+                                                                        | EN
+
+                        .container
+                            .box
                                 br
                                 br
+                                br
+                                br
+                                br
+                                br
+                                h1.text-break= res.__('hero-text')
+                                p.text-break= settings.description
+                                br
+                                br
+                                
                     .carousel-item
                         .bg-image-3
                         .container
@@ -210,7 +257,8 @@ html(lang="en")
                                                     img(src="SVG/Icon%20awesome-location-arrow.svg" alt="")
                                                 dl
                                                     dt= res.__('location')
-                                                    dd= settings.adress
+                                                    dd
+                                                        a.text-reset( href="https://www.google.ru/maps/place/8855+Bay+Pkwy,+Brooklyn,+NY+11214,+%D0%A1%D0%A8%D0%90/@40.5967234,-74.0009946,17z/data=!3m1!4b1!4m5!3m4!1s0x89c245a71e80a429:0x4b7ea2a03e30f0d!8m2!3d40.5967193!4d-73.9988059" target="blank")= settings.adress
                                             .col-lg-2.ab
                                                 span
                                                     img(src="SVG/Icon%20awesome-phone-alt.svg" alt="")
@@ -256,28 +304,14 @@ html(lang="en")
                                 p.text-break= settings.description
                                 br
                                 br
-                                .row.mt-5
-                                    .col-lg-4
-                                        button.w-100.btn
-                                            img(src="SVG/Icon%20ionic-ios-mail.svg" alt="")
-                                            b= res.__('send-email')
-                                    .col-lg-4
-                                        button.w-100.btn
-                                            img(src="SVG/Icon%20ionic-md-chatboxes.svg" alt="")
-                                            b= res.__('send-question')
-                                    .col-lg-4
-                                        button.w-100.btn
-                                            img(src="SVG/Icon%20awesome-phone-alt.svg" alt="")
-                                            b= res.__('send-call')
-                                br
-                                br
+                                
 
-                //a.carousel-control-prev(href="#carouselExampleCaptions" role="button" data-slide="prev")
-                //    span.carousel-control-prev-icon(aria-hidden="true")
-                //    span.sr-only Previous
-                //a.carousel-control-next(href="#carouselExampleCaptions" role="button" data-slide="next")
-                //    span.carousel-control-next-icon(aria-hidden="true")
-                //    span.sr-only Next
+                a.carousel-control-prev(href="#carouselExampleCaptions" role="button" data-slide="prev" style="width: 10%;")
+                    span.carousel-control-prev-icon(aria-hidden="false")
+                    span.sr-only Previous
+                a.carousel-control-next(href="#carouselExampleCaptions" role="button" data-slide="next" style="width: 10%;")
+                    span.carousel-control-next-icon(aria-hidden="true")
+                    span.sr-only Next
 
             //.container
             //    .header
@@ -301,7 +335,8 @@ html(lang="en")
             //                            img(src="SVG/Icon%20awesome-location-arrow.svg" alt="")
             //                        dl
             //                            dt= res.__('location')
-            //                            dd= settings.adress
+            //                            dd
+                                                        a.text-reset( href="https://www.google.ru/maps/place/8855+Bay+Pkwy,+Brooklyn,+NY+11214,+%D0%A1%D0%A8%D0%90/@40.5967234,-74.0009946,17z/data=!3m1!4b1!4m5!3m4!1s0x89c245a71e80a429:0x4b7ea2a03e30f0d!8m2!3d40.5967193!4d-73.9988059" target="blank")= settings.adress
             //                    .col-lg-2.ab
             //                        span
             //                            img(src="SVG/Icon%20awesome-phone-alt.svg" alt="")
@@ -362,8 +397,8 @@ html(lang="en")
             //                    b= res.__('send-call')
             //        br
             //        br
-        .section2
-            .container
+        .section2.bg-light
+            .container.py-3
                 .row.my-lg-5
                     .col-lg-7
                         h1= res.__("about-heading-1")
@@ -439,10 +474,10 @@ html(lang="en")
                     h2.text-break.pt-4.heading= res.__("products-heading-1")
                         span(style="background-color:  #484848; color: whitesmoke")= res.__("products-heading-2")
                     .badge.badge-dark .
-                    p(style="color: grey")= res.__("products-description")
+                    p.py-3(style="color: grey")= res.__("products-description")
                 .row
                     for product in products
-                        .col-lg-6.mb-4
+                        .col-lg-6.mb-5
                             .card.border-0
                                 img.card-img-top(src=product.image alt="..." style="max-height: 300px")
                                 .card-body.mr-4.ml-4.border.mt-n5.bg-white
@@ -460,8 +495,9 @@ html(lang="en")
                                         p.text-truncate.card-text= product.description[langIndex]
                                         button.btn.btn-outline-dark.product-more= res.__('more')
 
-                .d-flex.justify-content-center
-                    button.btn.btn-outline-dark.mt-3(type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample")= res.__("more")
+                if productsAll.length !== 0
+                    .d-flex.justify-content-center
+                        button.btn.btn-outline-dark.mt-3(type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample")= res.__("more")
                         
 
         .section5
